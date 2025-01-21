@@ -65,68 +65,39 @@ class CollisionAvoidance : public rclcpp::Node {
 
         geometry_msgs::msg::Twist findClosestAcceptableVelocity(const geometry_msgs::msg::Twist & desired) {
             geometry_msgs::msg::Twist res = desired;
-            RCLCPP_INFO(this->get_logger(), 
-                    "Speed limiter: desired x %.2f, desired y %.2f, desired z %.2f",
-                    desired.linear.x, desired.linear.y, desired.linear.z);
-            
 
-            // Initial safety checks
-            if (std::abs(desired.linear.x) > max_velocity) {
-                res.linear.x = (desired.linear.x > 0) ? max_velocity : -max_velocity;
-            }
+            // if (std::abs(desired.linear.x) > max_velocity) {
+            //     res.linear.x = (desired.linear.x > 0) ? max_velocity : -max_velocity;
+            // }
 
-            // Variables to track closest obstacles in the direction of motion
             float min_forward_dist = ignore_diameter;
-            float min_backward_dist = ignore_diameter;
 
-            // Analyze each point in the point cloud
-
-            
-            for (const auto& point : lastpc) {
-                float x = point.x;
-                float y = point.y;
+            unsigned int n = lastpc.size();
+            for (unsigned int i=0;i<n;i++) {
+                float x = lastpc[i].x;
+                float y = lastpc[i].y;
                 float dist = hypot(x, y);
 
-                // Skip invalid points or points outside our area of interest
-                if (dist < 1e-2 || dist > ignore_diameter) {
+                if (hypot(x,y) < 1e-2) {
+                    // bogus point, the laser did not return
                     continue;
                 }
-
-                // Check if point is in front or behind
                 if (x > 0) {
                     min_forward_dist = std::min(min_forward_dist, dist);
-                } else {
-                    min_backward_dist = std::min(min_backward_dist, dist);
                 }
             }
 
-            // Adjust velocity based on obstacles
             if (desired.linear.x > 0 && min_forward_dist < ignore_diameter) {
-                // Scale down forward velocity as we get closer to obstacles
-                float scale = (min_forward_dist - safety_diameter) / 
-                            (ignore_diameter - safety_diameter);
+                float scale = (min_forward_dist - safety_diameter) / (ignore_diameter - safety_diameter);
                 scale = std::max(0.0f, std::min(1.0f, scale));
                 res.linear.x = desired.linear.x * scale;
-            } else if (desired.linear.x < 0 && min_backward_dist < ignore_diameter) {
-                // Scale down backward velocity as we get closer to obstacles
-                float scale = (min_backward_dist - safety_diameter) / 
-                            (ignore_diameter - safety_diameter);
-                scale = std::max(0.0f, std::min(1.0f, scale));
-                res.linear.x = desired.linear.x * scale;
-            }
-
-            // Emergency stop if too close
-            if ((desired.linear.x > 0 && min_forward_dist <= safety_diameter) ||
-                (desired.linear.x < 0 && min_backward_dist <= safety_diameter)) {
+            } 
+            if (desired.linear.x > 0 && min_forward_dist <= safety_diameter) {
                 res.linear.x = 0.0;
             }
-
-        // RCLCPP_INFO(this->get_logger(), 
-        //             "Speed limiter: desired %.2f controlled %.2f (min_dist_f: %.2f, min_dist_b: %.2f)",
-        //             desired.linear.x, res.linear.x, min_forward_dist, min_backward_dist);
-        
-        return res;
-    }
+            RCLCPP_INFO(this->get_logger(),"Speed limiter: desired %.2f controlled %.2f",desired.linear.x,res.linear.x);
+            return res;
+        }
 
     public:
         CollisionAvoidance() : rclcpp::Node("collision_avoidance") {
