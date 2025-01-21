@@ -65,30 +65,74 @@ class CollisionAvoidance : public rclcpp::Node {
 
         geometry_msgs::msg::Twist findClosestAcceptableVelocity(const geometry_msgs::msg::Twist & desired) {
             geometry_msgs::msg::Twist res = desired;
-            // TODO: modify desired using the laser point cloud stored in
-            // lastpc. You should also use the ros param stored in the
-            // variables 'only_forward', 'safety_diameter', 'ignore_diameter',
-            // 'max_velocity'.
-            unsigned int n = lastpc.size();
-            for (unsigned int i=0;i<n;i++) {
-                float x = lastpc[i].x;
-                float y = lastpc[i].y;
+            RCLCPP_INFO(this->get_logger(), 
+                    "Speed limiter: desired %.2f",
+                    desired.linear.x);
+            
 
-                if (hypot(x,y) < 1e-2) {
-                    // bogus point, the laser did not return
+            // Initial safety checks
+            if (std::abs(desired.linear.x) > max_velocity) {
+                res.linear.x = (desired.linear.x > 0) ? max_velocity : -max_velocity;
+            }
+
+            // Variables to track closest obstacles in the direction of motion
+            float min_forward_dist = ignore_diameter;
+            float min_backward_dist = ignore_diameter;
+
+            // Analyze each point in the point cloud
+
+            
+            for (const auto& point : lastpc) {
+                float x = point.x;
+                float y = point.y;
+                float dist = hypot(x, y);
+
+                // Skip invalid points or points outside our area of interest
+                if (dist < 1e-2 || dist > ignore_diameter) {
                     continue;
                 }
 
+                // Check if point is in front or behind
+                if (x > 0) {
+                    min_forward_dist = std::min(min_forward_dist, dist);
+                } else {
+                    min_backward_dist = std::min(min_backward_dist, dist);
+                }
             }
-            RCLCPP_INFO(this->get_logger(),"Speed limiter: desired %.2f controlled %.2f",desired.linear.x,res.linear.x);
-            return res;
-        }
+
+            // Adjust velocity based on obstacles
+            if (desired.linear.x > 0 && min_forward_dist < ignore_diameter) {
+                // Scale down forward velocity as we get closer to obstacles
+                float scale = (min_forward_dist - safety_diameter) / 
+                            (ignore_diameter - safety_diameter);
+                scale = std::max(0.0f, std::min(1.0f, scale));
+                res.linear.x = desired.linear.x * scale;
+            } else if (desired.linear.x < 0 && min_backward_dist < ignore_diameter) {
+                // Scale down backward velocity as we get closer to obstacles
+                float scale = (min_backward_dist - safety_diameter) / 
+                            (ignore_diameter - safety_diameter);
+                scale = std::max(0.0f, std::min(1.0f, scale));
+                res.linear.x = desired.linear.x * scale;
+            }
+
+            // Emergency stop if too close
+            if ((desired.linear.x > 0 && min_forward_dist <= safety_diameter) ||
+                (desired.linear.x < 0 && min_backward_dist <= safety_diameter)) {
+                res.linear.x = 0.0;
+            }
+
+        // RCLCPP_INFO(this->get_logger(), 
+        //             "Speed limiter: desired %.2f controlled %.2f (min_dist_f: %.2f, min_dist_b: %.2f)",
+        //             desired.linear.x, res.linear.x, min_forward_dist, min_backward_dist);
+        
+        return res;
+    }
 
     public:
         CollisionAvoidance() : rclcpp::Node("collision_avoidance") {
             this->declare_parameter("~/only_forward", true);
             this->declare_parameter("~/max_velocity", 1.0);
-            this->declare_parameter("~/safety_diameter", 0.3);
+            this->declare_parameter("~/safety_diameter", 2.0);
             this->declare_parameter("~/ignore_diameter", 1.0);
             only_forward = this->get_parameter("~/only_forward").as_bool();
             max_velocity = this->get_parameter("~/max_velocity").as_double();
