@@ -60,9 +60,9 @@ def generate_launch_description():
         launch_ros.actions.Node(
             package='vrep_ros_teleop', executable='teleop_node', name='teleop',
             parameters=[
-                {'~/axis_linear_x': 4},
-                {'~/axis_angular': 3},
-                {'~/scale_linear_x': 0.2},
+                {'~/axis_linear_x': 1},
+                {'~/axis_angular': 0},
+                {'~/scale_linear_x': 0.5},
                 {'~/scale_angular': 1.},
                 {'~/timeout': 1.0}
                 ],
@@ -87,7 +87,7 @@ def generate_launch_description():
         launch_ros.actions.Node(
             package='collision_avoidance_base', executable='collision_avoidance_base', name='collision_avoidance',
             parameters=[
-                {'~/safety_diameter': 0.15},
+                {'~/safety_diameter': 0.3},
                 {'~/ignore_diameter': 1.0},
                 {'~/max_velocity': 1.0},
                 {'~/only_forward': False},
@@ -95,7 +95,7 @@ def generate_launch_description():
             remappings=[
                 ('~/clouds', '/points'),
                 ('~/scans', '/vrep/hokuyo'),
-                ('~/vel_input', '/vrep/safeCommand'),
+                ('~/vel_input', '/teleop/twistCommand'),
                 ('~/vel_output', '/vrep/twistCommand'),
                 ],
             output='screen'),

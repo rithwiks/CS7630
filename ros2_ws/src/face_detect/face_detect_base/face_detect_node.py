@@ -8,7 +8,7 @@ from rclpy.node import Node
 from rclpy.time import Time
 
 from sensor_msgs.msg import Image,RegionOfInterest
-# TODO: Add custom message here
+from cs7630_msgs.msg import RegionOfInterestArray
 
 from cv_bridge import CvBridge
 import cv2
@@ -40,7 +40,7 @@ class FaceDetect(Node):
         self.display = self.get_parameter('display').get_parameter_value().bool_value
         self.detect_eyes = self.get_parameter('eyes').get_parameter_value().bool_value
         # TODO: Create custom publisher here
-        self.pub = None
+        self.pub = self.create_publisher(RegionOfInterestArray, '~/detected_faces', 1)
         self.sub = self.create_subscription(Image,"~/image", self.detect_and_draw, 1)
 
     def detect_and_draw(self,imgmsg):
@@ -48,6 +48,8 @@ class FaceDetect(Node):
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = self.face_cascade.detectMultiScale(gray, 1.3, 3)
         # TODO: collect detected faces into a list of region of interest inside a custom message
+        face_regions = RegionOfInterestArray()
+        temp = []
         for (x,y,w,h) in faces:
             if self.display:
                 cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
@@ -58,9 +60,15 @@ class FaceDetect(Node):
                 if self.display:
                     for (ex,ey,ew,eh) in eyes:
                         cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-
+            temp_region = RegionOfInterest()
+            temp_region.x_offset = int(x)
+            temp_region.y_offset = int(y)
+            temp_region.width = int(w)
+            temp_region.height = int(h)
+            temp.append(temp_region)
+        face_regions.regions = temp
         # TODO: publish detected region of interest using self.pub
-        
+        self.pub.publish(face_regions)
         if self.display:
             cv2.imshow('img',img)
             cv2.waitKey(10)

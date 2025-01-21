@@ -65,20 +65,35 @@ class CollisionAvoidance : public rclcpp::Node {
 
         geometry_msgs::msg::Twist findClosestAcceptableVelocity(const geometry_msgs::msg::Twist & desired) {
             geometry_msgs::msg::Twist res = desired;
-            // TODO: modify desired using the laser point cloud stored in
-            // lastpc. You should also use the ros param stored in the
-            // variables 'only_forward', 'safety_diameter', 'ignore_diameter',
-            // 'max_velocity'.
+
+            // if (std::abs(desired.linear.x) > max_velocity) {
+            //     res.linear.x = (desired.linear.x > 0) ? max_velocity : -max_velocity;
+            // }
+
+            float min_forward_dist = ignore_diameter;
+
             unsigned int n = lastpc.size();
             for (unsigned int i=0;i<n;i++) {
                 float x = lastpc[i].x;
                 float y = lastpc[i].y;
+                float dist = hypot(x, y);
 
                 if (hypot(x,y) < 1e-2) {
                     // bogus point, the laser did not return
                     continue;
                 }
+                if (x > 0) {
+                    min_forward_dist = std::min(min_forward_dist, dist);
+                }
+            }
 
+            if (desired.linear.x > 0 && min_forward_dist < ignore_diameter) {
+                float scale = (min_forward_dist - safety_diameter) / (ignore_diameter - safety_diameter);
+                scale = std::max(0.0f, std::min(1.0f, scale));
+                res.linear.x = desired.linear.x * scale;
+            } 
+            if (desired.linear.x > 0 && min_forward_dist <= safety_diameter) {
+                res.linear.x = 0.0;
             }
             RCLCPP_INFO(this->get_logger(),"Speed limiter: desired %.2f controlled %.2f",desired.linear.x,res.linear.x);
             return res;
@@ -88,7 +103,7 @@ class CollisionAvoidance : public rclcpp::Node {
         CollisionAvoidance() : rclcpp::Node("collision_avoidance") {
             this->declare_parameter("~/only_forward", true);
             this->declare_parameter("~/max_velocity", 1.0);
-            this->declare_parameter("~/safety_diameter", 0.3);
+            this->declare_parameter("~/safety_diameter", 2.0);
             this->declare_parameter("~/ignore_diameter", 1.0);
             only_forward = this->get_parameter("~/only_forward").as_bool();
             max_velocity = this->get_parameter("~/max_velocity").as_double();
