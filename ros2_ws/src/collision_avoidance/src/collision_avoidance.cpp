@@ -66,8 +66,8 @@ class CollisionAvoidance : public rclcpp::Node {
         geometry_msgs::msg::Twist findClosestAcceptableVelocity(const geometry_msgs::msg::Twist & desired) {
             geometry_msgs::msg::Twist res = desired;
             RCLCPP_INFO(this->get_logger(), 
-                    "Speed limiter: desired %.2f",
-                    desired.linear.x);
+                    "Speed limiter: desired x %.2f, desired y %.2f, desired z %.2f",
+                    desired.linear.x, desired.linear.y, desired.linear.z);
             
 
             // Initial safety checks
