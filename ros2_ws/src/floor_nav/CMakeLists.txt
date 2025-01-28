@@ -166,6 +166,7 @@ install(PROGRAMS
 	missions/test_planto.py
 	missions/test_set_heading.py
 	missions/test_wander.py
+  missions/wander_random_and_stare.py
     DESTINATION lib/${PROJECT_NAME} 
 )
 ament_package()
