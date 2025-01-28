@@ -99,6 +99,9 @@ TARGET_LINK_LIBRARIES(floornav_TaskGoTo ${ALL_LIBS})
 ADD_LIBRARY( floornav_TaskSetHeading SHARED tasks/TaskSetHeading.cpp)
 TARGET_LINK_LIBRARIES(floornav_TaskSetHeading ${ALL_LIBS})
 
+ADD_LIBRARY( floornav_TaskStareAtFace SHARED tasks/TaskStareAtFace.cpp)
+TARGET_LINK_LIBRARIES(floornav_TaskStareAtFace ${ALL_LIBS})
+
 ADD_LIBRARY( floornav_TaskPlanTo SHARED tasks/TaskPlanTo.cpp)
 TARGET_LINK_LIBRARIES(floornav_TaskPlanTo ${ALL_LIBS})
 
@@ -138,6 +141,7 @@ install(TARGETS
     floornav_TaskWaitForFace
     floornav_TaskWander
     floornav_TaskSetHeading
+    floornav_TaskStareAtFace
     floornav_TaskPlanTo
     floornav_TaskGoTo
     floornav_TaskConstant
