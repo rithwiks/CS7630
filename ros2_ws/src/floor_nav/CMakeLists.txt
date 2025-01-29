@@ -96,6 +96,9 @@ TARGET_LINK_LIBRARIES(floornav_TaskConstant ${ALL_LIBS})
 ADD_LIBRARY( floornav_TaskGoTo SHARED tasks/TaskGoTo.cpp)
 TARGET_LINK_LIBRARIES(floornav_TaskGoTo ${ALL_LIBS})
 
+ADD_LIBRARY( floornav_TaskGoToPose SHARED tasks/TaskGoToPose.cpp)
+TARGET_LINK_LIBRARIES(floornav_TaskGoToPose ${ALL_LIBS})
+
 ADD_LIBRARY( floornav_TaskSetHeading SHARED tasks/TaskSetHeading.cpp)
 TARGET_LINK_LIBRARIES(floornav_TaskSetHeading ${ALL_LIBS})
 
@@ -149,6 +152,7 @@ install(TARGETS
     floornav_TaskSetBool
     floornav_TaskSetMux
     floornav_TaskNav2
+    floornav_TaskGoToPose
     DESTINATION lib/${PROJECT_NAME})
 
 install(
@@ -160,6 +164,7 @@ install(
 install(PROGRAMS  
 	missions/graph_forever.py
 	missions/test_goto.py
+  missions/test_goto_pose.py
 	missions/test_graph_2d.py
 	missions/test_graph.py
 	missions/test_graph-test.py
