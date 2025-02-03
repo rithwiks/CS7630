@@ -71,18 +71,29 @@ class RoverKinematics:
         motors = RoverMotors()
         if skidsteer:
             for k in drive_cfg.keys():
-                # TODO: In case we are in skidsteer mode (driving like a tank)
-                # Insert here the steering and velocity of 
-                # each wheel in skid-steer mode
+                dist = hypot(drive_cfg[k[0]+'L'].x, drive_cfg[k[0]+'L'].y)
+                if k[-1] == 'L':
+                    v = twist.linear.x - twist.angular.z * dist
+                else:
+                    v = twist.linear.x + twist.angular.z * dist
                 motors.steering[k] = 0
-                motors.drive[k] = 0
+                motors.drive[k] = v / drive_cfg[k].radius
         else:
             for k in drive_cfg.keys():
-                # TODO: In case we are in rolling without slipping mode (driving normally)
-                # Insert here the steering and velocity of 
-                # each wheel in rolling-without-slipping mode
-                motors.steering[k] = 0
-                motors.drive[k] = 0
+                x, y, r = drive_cfg[k].x, drive_cfg[k].y, drive_cfg[k].radius
+                vx = twist.linear.x - twist.angular.z * y
+                vy = twist.linear.y + twist.angular.z * x 
+                theta = atan2(vy, vx)
+                direction = vx * cos(theta) + vy * sin(theta)
+                sign = 1.0 if direction > 0 else -1.0
+                if theta > pi/2.0:
+                    theta -= pi
+                    sign *= -1
+                elif theta < -pi/2.0:
+                    theta += pi
+                    sign *= -1
+                motors.steering[k] = theta
+                motors.drive[k] = hypot(vy, vx) / r * sign
         return motors
 
     def prepare_inversion_matrix(self,drive_cfg):
