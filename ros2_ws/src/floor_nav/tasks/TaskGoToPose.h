@@ -21,6 +21,8 @@ namespace floor_nav {
             define("angle_threshold", 0.1, "Angle at which the target orientation is considered reached", false, angle_threshold);
             define("relative", false, "Is the target pose relative or absolute", true, relative);
             define("smart_motion", true, "Use smart kinematic control instead of dumb approach", true, smart_motion);
+            define("holonomic", false, "Allow holonomic movement (sideways/diagonal motion)", true, holonomic_mode);
+
         }
 
         // convenience aliases, updated by update from the config data
@@ -32,6 +34,7 @@ namespace floor_nav {
         double angle_threshold;
         bool relative;
         bool smart_motion;
+        bool holonomic_mode;
     };
 
     class TaskGoToPose : public TaskInstance<TaskGoToPoseConfig, SimTasksEnv>
@@ -41,6 +44,7 @@ namespace floor_nav {
             bool position_reached;
             TaskIndicator iterateDumb();
             TaskIndicator iterateSmart();
+            TaskIndicator iterateHolonomic();
 
         public:
             TaskGoToPose(TaskDefinitionPtr def, TaskEnvironmentPtr env) : Parent(def,env) {
