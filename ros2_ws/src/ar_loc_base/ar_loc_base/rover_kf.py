@@ -41,6 +41,21 @@ class RoverKF(RoverOdo):
         # ultimately : 
         # self.X =  
         # self.P = 
+        DeltaX = iW @ S
+        theta = self.X[2,0]
+        Rtheta = mat([[cos(theta), -sin(theta), 0], [sin(theta),  cos(theta), 0], [0,0,1]])
+
+        self.X = self.X + self.X + R @ mat(DeltaX).reshape(3,1)
+        dx = float(DeltaX[0])
+        dy = float(DeltaX[1])
+
+        J_x = mat([[1,0, -dx*sin(theta) - dy*cos(theta)], [0, 1, dx*cos(theta) - dy*sin(theta)], [0,0,1]])
+        J_u = R
+
+        scale = np.sqrt(dx**2 + dy**2)
+        Q = mat(diag([encoder_precision * movement_scale] * 3))
+
+        self.P = J_x @ self.P @ J_x.T + J_u @ Q @ J_u.T
 
         self.lock.release()
         return (self.X,self.P)
@@ -51,6 +66,25 @@ class RoverKF(RoverOdo):
         # TODO
         # self.X = 
         # self.P = 
+
+        dx = L[0,0] - float(self.X[0,0])
+        dy = L[1,0] - float(self.X[1,0])
+        theta = float(self.X[2,0])
+
+        R = mat([[cos(theta), sin(theta)], [-sin(theta), cos(theta)]])
+        h = R @ mat([[dx], [dy]])
+
+        H = mat([
+            [-cos(theta), -sin(theta), -dx * sin(theta) + dy*cos(theta)], 
+            [sin(theta), -cos(theta), -dx*cos(theta) - dy*sin(theta)]
+        ])
+
+        R = mat(diag([uncertainty, uncertainty]))
+        S = H @ self.P @ H.T + R
+        K = self.P @ H.T @ inv(s)
+        self.X = self.X + K @ (mat(Z).reshape(2,1) - h)
+        self.P = (eye(3) - K @ H) @ self.P
+
         self.lock.release()
         return (self.X,self.P)
 
@@ -61,6 +95,23 @@ class RoverKF(RoverOdo):
         # TODO
         # self.X = 
         # self.P = 
+        theta = self.X[2,0]
+        H = mat([[0,0,1]])
+        R = mat([[uncertainty]])
+
+        i = Z - theta
+        while i > pi:
+            i -= 2 * pi
+        while i < -pi:
+            i += 2 * pi
+
+        i = mat([[i]])
+        S = H @ self.P @ H.T + R
+        K = self.P @ H.T @ inv(s)
+
+        self.X = self.X + K @ i
+        self.P = (eye(3) - K @ H) @ self.P
+
         self.lock.release()
         return (self.X,self.P)
 
