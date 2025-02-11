@@ -59,9 +59,8 @@ class RoverPF(RoverOdo):
         # Note, using the function applyDisplacement could be useful to compute the new particles
         # self.particles = ...
         DeltaX = iW @ S
-        norm = iW @ mat(vstack([encoder_precision]*len(S)))
         for i in range(len(self.particles)):
-            uncertainty = self.drawNoise(norm)
+            uncertainty = self.drawNoise(encoder_precision)
             self.particles[i] = self.applyDisplacement(self.particles[i], DeltaX, uncertainty)
         self.updateMean()
         self.lock.release()
