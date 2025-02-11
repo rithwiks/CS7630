@@ -17,6 +17,7 @@ namespace floor_nav {
             define("max_angular_velocity",  1.0,"Max allowed angular velocity",false, max_angular_velocity);
             define("dist_threshold",  0.1,"Distance at which a the target is considered reached",false, dist_threshold);
             define("relative",  false,"Is the target pose relative or absolute",true, relative);
+            define("holonomic", false, "Allow holonomic movement (sideways/diagonal motion)", true, holonomic_mode);
         }
 
         // convenience aliases, updated by update from the config data
@@ -26,6 +27,7 @@ namespace floor_nav {
         double max_angular_velocity;
         double dist_threshold;
         bool relative;
+        bool holonomic_mode;
 
     };
 

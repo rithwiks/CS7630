@@ -28,11 +28,48 @@ TaskIndicator TaskGoToPose::initialise()
 
 TaskIndicator TaskGoToPose::iterate()
 {
-    if (cfg->smart_motion) {
+    if (cfg->holonomic_mode) {
+        return iterateHolonomic();
+    } else if (cfg->smart_motion) {
         return iterateSmart();
     } else {
         return iterateDumb();
     }
+}
+TaskIndicator TaskGoToPose::iterateHolonomic()
+{
+    const geometry_msgs::msg::Pose2D & tpose = env->getPose2D();
+    
+    double dx = x_init + cfg->goal_x - tpose.x;
+    double dy = y_init + cfg->goal_y - tpose.y;
+    double r = hypot(dy, dx);
+    
+    if (r < cfg->dist_threshold) {
+        double theta_error = remainder(theta_init + cfg->goal_theta - tpose.theta, 2*M_PI);
+        if (fabs(theta_error) < cfg->angle_threshold) {
+            return TaskStatus::TASK_COMPLETED;
+        }
+        
+        double rot = cfg->k_beta * theta_error;
+        rot = std::min(std::max(rot, -cfg->max_angular_velocity), cfg->max_angular_velocity);
+        env->publishVelocity(0, 0, rot);
+        return TaskStatus::TASK_RUNNING;
+    }
+    
+    double goal_angle = atan2(dy, dx);
+    double theta_error = remainder(goal_angle - tpose.theta, 2*M_PI);
+    
+    double v_forward = cfg->k_v * r * cos(theta_error);
+    double v_sideways = cfg->k_v * r * sin(theta_error);
+    double omega = cfg->k_alpha * theta_error;
+    
+    v_forward = std::min(std::max(v_forward, -cfg->max_velocity), cfg->max_velocity);
+    v_sideways = std::min(std::max(v_sideways, -cfg->max_velocity), cfg->max_velocity);
+    omega = std::min(std::max(omega, -cfg->max_angular_velocity), cfg->max_angular_velocity);
+    
+    env->publishVelocity(v_forward, v_sideways, omega);
+    
+    return TaskStatus::TASK_RUNNING;
 }
 
 TaskIndicator TaskGoToPose::iterateDumb()
