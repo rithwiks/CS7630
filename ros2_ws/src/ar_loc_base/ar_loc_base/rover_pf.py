@@ -78,7 +78,16 @@ class RoverPF(RoverOdo):
     def evalParticleCompass(self,X, Value, Uncertainty):
         # Returns the fitness of a particle with state X given compass observation value
         # Beware of the module when computing the difference of angles
-        return 0
+        d_x = self.L[0] - self.X[0]
+        d_y = self.L[0] - self.X[1]
+
+        exp_ang = arctan2(dy, dx)
+
+        angle_diff = abs(exp_ang - angle)
+        angle_diff = min(angle_diff, 2 * pi - angle_diff)
+
+        return exp(-0.5 * (angle_diff**2) / (Uncertainty **2))
+
 
     def update_ar(self, logger, Z, L, Uncertainty):
         self.lock.acquire()
@@ -112,7 +121,13 @@ class RoverPF(RoverOdo):
 
         # TODO
 
-        # self.particles = ...
+        weights = []
+        for particle in self.particles:
+            weights.append(self.evalParticleCompass(self.X, angle, Uncertainty))
+
+        weights /= np.sum(weights)
+
+        self.particles = self.partciles[np.random.choice(len(self.particles), len(self.particles), p=weights)]
         
         self.updateMean()
         self.lock.release()
