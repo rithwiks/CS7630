@@ -67,7 +67,13 @@ class RoverPF(RoverOdo):
 
     def evalParticleAR(self,X, Z, L, Uncertainty):
         # Returns the fitness of a particle with state X given observation Z of landmark L
-        return 0
+        theta = X[2]
+        Rtheta = mat([[cos(theta), -sin(theta)], [sin(theta),  cos(theta)]])
+        L_part = X[:2] + Rtheta @ Z
+        temp = L - L_part
+        dist = temp[0]**2 + temp[1]**2
+        p_part = exp(-(dist) / (2*Uncertainty**2))
+        return p_part[0]
 
     def evalParticleCompass(self,X, Value, Uncertainty):
         # Returns the fitness of a particle with state X given compass observation value
@@ -83,7 +89,17 @@ class RoverPF(RoverOdo):
         # TODO
 
         # self.particles = ...
-        
+        weights = [0]*len(self.particles)
+        for i, part in enumerate(self.particles):
+            weights[i] = self.evalParticleAR(part, Z, L, Uncertainty)
+        weights = array(weights).squeeze()
+        s = weights.sum()
+        weights /= s 
+        inds = random.choice(len(self.particles), size=len(self.particles), p=weights)
+        new_parts = [self.particles[i] for i in inds]
+        self.particles = new_parts
+
+
         self.updateMean()
         self.lock.release()
 
