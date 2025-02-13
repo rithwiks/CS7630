@@ -45,15 +45,15 @@ class RoverKF(RoverOdo):
         theta = self.X[2,0]
         Rtheta = mat([[cos(theta), -sin(theta), 0], [sin(theta),  cos(theta), 0], [0,0,1]])
 
-        self.X = self.X + self.X + R @ mat(DeltaX).reshape(3,1)
+        self.X = self.X + self.X + Rtheta @ mat(DeltaX).reshape(3,1)
         dx = float(DeltaX[0])
         dy = float(DeltaX[1])
 
         J_x = mat([[1,0, -dx*sin(theta) - dy*cos(theta)], [0, 1, dx*cos(theta) - dy*sin(theta)], [0,0,1]])
-        J_u = R
+        J_u = Rtheta
 
-        scale = np.sqrt(dx**2 + dy**2)
-        Q = mat(diag([encoder_precision * movement_scale] * 3))
+        scale = sqrt(dx**2 + dy**2)
+        Q = mat(diag([encoder_precision * scale] * 3))
 
         self.P = J_x @ self.P @ J_x.T + J_u @ Q @ J_u.T
 
@@ -81,7 +81,7 @@ class RoverKF(RoverOdo):
 
         R = mat(diag([uncertainty, uncertainty]))
         S = H @ self.P @ H.T + R
-        K = self.P @ H.T @ inv(s)
+        K = self.P @ H.T @ inv(S)
         self.X = self.X + K @ (mat(Z).reshape(2,1) - h)
         self.P = (eye(3) - K @ H) @ self.P
 
@@ -107,7 +107,7 @@ class RoverKF(RoverOdo):
 
         i = mat([[i]])
         S = H @ self.P @ H.T + R
-        K = self.P @ H.T @ inv(s)
+        K = self.P @ H.T @ inv(S)
 
         self.X = self.X + K @ i
         self.P = (eye(3) - K @ H) @ self.P
