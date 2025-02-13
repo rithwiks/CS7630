@@ -45,7 +45,8 @@ class RoverKF(RoverOdo):
         theta = self.X[2,0]
         Rtheta = mat([[cos(theta), -sin(theta), 0], [sin(theta),  cos(theta), 0], [0,0,1]])
 
-        self.X = self.X + self.X + Rtheta @ mat(DeltaX).reshape(3,1)
+        # self.X = self.X + self.X + Rtheta @ mat(DeltaX).reshape(3,1)
+        self.X += Rtheta @ DeltaX[:, newaxis]
         dx = float(DeltaX[0])
         dy = float(DeltaX[1])
 
@@ -66,13 +67,12 @@ class RoverKF(RoverOdo):
         # TODO
         # self.X = 
         # self.P = 
-
         dx = L[0,0] - float(self.X[0,0])
         dy = L[1,0] - float(self.X[1,0])
         theta = float(self.X[2,0])
 
-        R = mat([[cos(theta), sin(theta)], [-sin(theta), cos(theta)]])
-        h = R @ mat([[dx], [dy]])
+        Rtheta = mat([[cos(theta), sin(theta)], [-sin(theta), cos(theta)]])
+        h = Rtheta @ mat([[dx], [dy]])
 
         H = mat([
             [-cos(theta), -sin(theta), -dx * sin(theta) + dy*cos(theta)], 
@@ -82,6 +82,7 @@ class RoverKF(RoverOdo):
         R = mat(diag([uncertainty, uncertainty]))
         S = H @ self.P @ H.T + R
         K = self.P @ H.T @ inv(S)
+        print(dx, dy)
         self.X = self.X + K @ (mat(Z).reshape(2,1) - h)
         self.P = (eye(3) - K @ H) @ self.P
 
