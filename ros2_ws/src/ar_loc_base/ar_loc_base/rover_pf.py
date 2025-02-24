@@ -76,7 +76,7 @@ class RoverPF(RoverOdo):
         # return p_part[0]
         theta = X[2]
         Rtheta = mat([[cos(theta), -sin(theta)], [sin(theta),  cos(theta)]])
-        temp = Z - Rtheta.T @ L
+        temp = Z - Rtheta.T @ (L - X[:2])
         dist = temp[0]**2 + temp[1]**2
         p_part = exp(-(dist) / (2*Uncertainty**2))
         return p_part[0]
