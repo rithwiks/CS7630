@@ -29,6 +29,7 @@ class RoverMapping(Node):
         self.name = name
         self.declare_parameter('~/rover_name', self.name)
         self.declare_parameter('~/target_frame', "world")
+        self.declare_parameter('~/base_frame', '%s_ground'%(self.name))
         self.declare_parameter('~/use_ar', False)
         self.declare_parameter('~/use_compass', False)
         self.declare_parameter('~/ignore_id', False)
@@ -43,6 +44,7 @@ class RoverMapping(Node):
         self.use_compass = self.get_parameter('~/use_compass').get_parameter_value().bool_value
         self.ignore_id = self.get_parameter('~/ignore_id').get_parameter_value().bool_value
         self.target_frame = self.get_parameter('~/target_frame').get_parameter_value().string_value
+        self.base_frame = self.get_parameter('~/base_frame').get_parameter_value().string_value
         self.encoder_precision = self.get_parameter('~/encoder_precision').get_parameter_value().double_value
         self.ar_precision = self.get_parameter('~/ar_precision').get_parameter_value().double_value
         self.compass_precision = self.get_parameter('~/compass_precision').get_parameter_value().double_value
@@ -114,7 +116,7 @@ class RoverMapping(Node):
 
     def publish(self, stamp):
         self.mapper.publish(self.pose_pub,self.odom_pub,self.target_frame,stamp,"%s_ground" % self.name)
-        self.mapper.broadcast(self.broadcaster, self.target_frame, stamp)
+        self.mapper.broadcast(self.broadcaster, self.target_frame, self.base_frame, stamp)
 
 
     def sync_odo_cb(self,*args):

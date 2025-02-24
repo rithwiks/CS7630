@@ -31,12 +31,8 @@ class Landmark:
         theta = X[2,0]
         Rtheta = mat([[cos(theta), -sin(theta)], [sin(theta),  cos(theta)]])
         self.L = X[:2] + Rtheta @ Z
-        dx = float(X[0])
-        dy = float(X[1])
-
-        J_u = Rtheta
         R = mat(diag([R, R]))
-        self.P = J_u @ R @ J_u.T
+        self.P = R
 
     def update(self,Z, X, R):
         # Update the landmark based on measurement Z, 
@@ -44,16 +40,15 @@ class Landmark:
         # TODO
         theta = X[2,0]
         Rtheta = mat([[cos(theta), -sin(theta)], [sin(theta),  cos(theta)]])
-        new_L = X[:2] + Rtheta @ Z
-        dx = float(X[0])
-        dy = float(X[1])
-        y = new_L - self.L
-        J_u = Rtheta
+        # new_L = X[:2] + Rtheta @ Z
+        prev_Z = Rtheta.T @ (self.L - X[:2])
+        y = Z - prev_Z
         R = mat(diag([R, R]))
-        S = self.P + J_u @ R @ J_u.T
-        K = self.P @ inv(S)
+        H = Rtheta.T
+        S = H @ self.P @ H.T + R
+        K = self.P @ H.T @ inv(S)
         self.L += K @ y 
-        self.P = (eye(2) - K) @ self.P
+        self.P = (eye(2) - K @ H) @ self.P
         return
         
 
