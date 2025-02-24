@@ -84,9 +84,7 @@ class RoverPF(RoverOdo):
     def evalParticleCompass(self,X, Value, Uncertainty):
         # Returns the fitness of a particle with state X given compass observation value
         # Beware of the module when computing the difference of angles
-        angle_diff = abs(X[2].item() - Value)
-        angle_diff = min(angle_diff, 2 * pi - angle_diff)
-
+        angle_diff = fmod(X[2].item() - Value + pi, 2*pi) - pi
         return exp(-0.5 * (angle_diff**2) / (Uncertainty **2))
 
 
