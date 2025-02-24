@@ -67,10 +67,16 @@ class RoverPF(RoverOdo):
 
     def evalParticleAR(self,X, Z, L, Uncertainty):
         # Returns the fitness of a particle with state X given observation Z of landmark L
+        # theta = X[2]
+        # Rtheta = mat([[cos(theta), -sin(theta)], [sin(theta),  cos(theta)]])
+        # L_part = X[:2] + Rtheta @ Z
+        # temp = L - L_part
+        # dist = temp[0]**2 + temp[1]**2
+        # p_part = exp(-(dist) / (2*Uncertainty**2))
+        # return p_part[0]
         theta = X[2]
         Rtheta = mat([[cos(theta), -sin(theta)], [sin(theta),  cos(theta)]])
-        L_part = X[:2] + Rtheta @ Z
-        temp = L - L_part
+        temp = Z - Rtheta.T @ L
         dist = temp[0]**2 + temp[1]**2
         p_part = exp(-(dist) / (2*Uncertainty**2))
         return p_part[0]
@@ -78,12 +84,7 @@ class RoverPF(RoverOdo):
     def evalParticleCompass(self,X, Value, Uncertainty):
         # Returns the fitness of a particle with state X given compass observation value
         # Beware of the module when computing the difference of angles
-        d_x = self.L[0] - self.X[0]
-        d_y = self.L[0] - self.X[1]
-
-        exp_ang = arctan2(dy, dx)
-
-        angle_diff = abs(exp_ang - angle)
+        angle_diff = abs(X[2].item() - Value)
         angle_diff = min(angle_diff, 2 * pi - angle_diff)
 
         return exp(-0.5 * (angle_diff**2) / (Uncertainty **2))
@@ -125,9 +126,10 @@ class RoverPF(RoverOdo):
         for particle in self.particles:
             weights.append(self.evalParticleCompass(self.X, angle, Uncertainty))
 
-        weights /= np.sum(weights)
-
-        self.particles = self.partciles[np.random.choice(len(self.particles), len(self.particles), p=weights)]
+        weights /= sum(weights)
+        inds = random.choice(len(self.particles), size=len(self.particles), p=weights)
+        new_parts = [self.particles[i] for i in inds]
+        self.particles = new_parts
         
         self.updateMean()
         self.lock.release()
