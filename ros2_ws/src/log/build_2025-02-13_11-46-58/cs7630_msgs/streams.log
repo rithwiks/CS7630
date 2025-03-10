@@ -1,0 +1,225 @@
+[1.159s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/cs7630_msgs -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs
+[2.214s] -- The C compiler identification is GNU 11.4.0
+[2.214s] -- The CXX compiler identification is GNU 11.4.0
+[2.214s] -- Detecting C compiler ABI info
+[2.214s] -- Detecting C compiler ABI info - done
+[2.214s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.214s] -- Detecting C compile features
+[2.214s] -- Detecting C compile features - done
+[2.214s] -- Detecting CXX compiler ABI info
+[2.214s] -- Detecting CXX compiler ABI info - done
+[2.214s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.214s] -- Detecting CXX compile features
+[2.214s] -- Detecting CXX compile features - done
+[2.214s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.214s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.607s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.670s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.832s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.291s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.609s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.326s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[5.042s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.798s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.821s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[5.868s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[5.915s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[5.916s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.916s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[5.916s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[5.934s] -- Found PythonExtra: .so  
+[6.160s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.508s] -- Added test 'lint_cmake' to check CMake code style
+[6.518s] -- Added test 'xmllint' to check XML markup files
+[6.566s] -- Configuring done
+[6.905s] -- Generating done
+[6.945s] -- Build files have been written to: /home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs
+[6.952s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/cs7630_msgs -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs
+[6.960s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs -- -j16 -l16
+[7.003s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.010s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[7.016s] [  6%] Built target ament_cmake_python_copy_cs7630_msgs
+[7.188s] [  6%] Built target cs7630_msgs__cpp
+[7.198s] [  9%] [32mBuilding C object CMakeFiles/cs7630_msgs__rosidl_generator_c.dir/rosidl_generator_c/cs7630_msgs/msg/detail/region_of_interest_array__functions.c.o[0m
+[7.199s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.201s] [ 19%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.202s] [ 19%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.242s] running egg_info
+[7.243s] writing cs7630_msgs.egg-info/PKG-INFO
+[7.244s] writing dependency_links to cs7630_msgs.egg-info/dependency_links.txt
+[7.245s] writing top-level names to cs7630_msgs.egg-info/top_level.txt
+[7.247s] writing manifest file 'cs7630_msgs.egg-info/SOURCES.txt'
+[7.251s] reading manifest file 'cs7630_msgs.egg-info/SOURCES.txt'
+[7.252s] writing manifest file 'cs7630_msgs.egg-info/SOURCES.txt'
+[7.255s] [ 22%] [32m[1mLinking C shared library libcs7630_msgs__rosidl_generator_c.so[0m
+[7.279s] [ 22%] Built target ament_cmake_python_build_cs7630_msgs_egg
+[7.292s] [ 22%] Built target cs7630_msgs__rosidl_generator_c
+[7.304s] [ 32%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.304s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.304s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.390s] [ 35%] [32mBuilding CXX object CMakeFiles/cs7630_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cs7630_msgs/msg/region_of_interest_array__type_support.cpp.o[0m
+[7.419s] [ 41%] [32mBuilding CXX object CMakeFiles/cs7630_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cs7630_msgs/msg/detail/dds_fastrtps/region_of_interest_array__type_support.cpp.o[0m
+[7.419s] [ 41%] [32mBuilding CXX object CMakeFiles/cs7630_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cs7630_msgs/msg/detail/region_of_interest_array__type_support.cpp.o[0m
+[7.505s] [ 48%] [32mBuilding CXX object CMakeFiles/cs7630_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cs7630_msgs/msg/detail/region_of_interest_array__type_support_c.cpp.o[0m
+[7.505s] [ 48%] [32mBuilding CXX object CMakeFiles/cs7630_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cs7630_msgs/msg/region_of_interest_array__type_support.cpp.o[0m
+[7.518s] [ 51%] [32mBuilding C object CMakeFiles/cs7630_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cs7630_msgs/msg/detail/region_of_interest_array__type_support.c.o[0m
+[7.533s] [ 54%] [32m[1mLinking CXX shared library libcs7630_msgs__rosidl_typesupport_c.so[0m
+[7.566s] [ 58%] [32m[1mLinking C shared library libcs7630_msgs__rosidl_typesupport_introspection_c.so[0m
+[7.569s] [ 58%] Built target cs7630_msgs__rosidl_typesupport_c
+[7.595s] [ 58%] Built target cs7630_msgs__rosidl_typesupport_introspection_c
+[7.648s] [ 61%] [32m[1mLinking CXX shared library libcs7630_msgs__rosidl_typesupport_cpp.so[0m
+[7.683s] [ 61%] Built target cs7630_msgs__rosidl_typesupport_cpp
+[7.744s] [ 64%] [32m[1mLinking CXX shared library libcs7630_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[7.754s] [ 67%] [32m[1mLinking CXX shared library libcs7630_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[7.783s] [ 70%] [32m[1mLinking CXX shared library libcs7630_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[7.806s] [ 70%] Built target cs7630_msgs__rosidl_typesupport_fastrtps_cpp
+[7.813s] [ 70%] Built target cs7630_msgs__rosidl_typesupport_introspection_cpp
+[7.840s] [ 70%] Built target cs7630_msgs__rosidl_typesupport_fastrtps_c
+[7.856s] [ 70%] Built target cs7630_msgs
+[7.876s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[8.079s] [ 74%] Built target cs7630_msgs__py
+[8.100s] [ 77%] [32mBuilding C object CMakeFiles/cs7630_msgs__rosidl_generator_py.dir/rosidl_generator_py/cs7630_msgs/msg/_region_of_interest_array_s.c.o[0m
+[8.199s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/cs7630_msgs/libcs7630_msgs__rosidl_generator_py.so[0m
+[8.234s] [ 80%] Built target cs7630_msgs__rosidl_generator_py
+[8.260s] [ 90%] [32mBuilding C object CMakeFiles/cs7630_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cs7630_msgs/_cs7630_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[8.260s] [ 90%] [32mBuilding C object CMakeFiles/cs7630_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cs7630_msgs/_cs7630_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.260s] [ 90%] [32mBuilding C object CMakeFiles/cs7630_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cs7630_msgs/_cs7630_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[8.333s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.333s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.335s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.370s] [100%] Built target cs7630_msgs__rosidl_typesupport_c__pyext
+[8.370s] [100%] Built target cs7630_msgs__rosidl_typesupport_fastrtps_c__pyext
+[8.375s] [100%] Built target cs7630_msgs__rosidl_typesupport_introspection_c__pyext
+[8.391s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs -- -j16 -l16
+[8.442s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs
+[8.448s] -- Install configuration: ""
+[8.448s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/ament_index/resource_index/rosidl_interfaces/cs7630_msgs
+[8.452s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs
+[8.453s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg
+[8.455s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/region_of_interest_array.h
+[8.458s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail
+[8.460s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__struct.h
+[8.463s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__functions.h
+[8.466s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__functions.c
+[8.469s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__type_support.h
+[8.473s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/rosidl_generator_c__visibility_control.h
+[8.476s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/library_path.sh
+[8.481s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/library_path.dsv
+[8.484s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_generator_c.so
+[8.490s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_generator_c.so" to ""
+[8.490s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs
+[8.491s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg
+[8.492s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail
+[8.493s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__rosidl_typesupport_fastrtps_c.h
+[8.497s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[8.502s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_fastrtps_c.so
+[8.507s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[8.508s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs
+[8.509s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg
+[8.510s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail
+[8.512s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__type_support.c
+[8.516s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__rosidl_typesupport_introspection_c.h
+[8.519s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[8.523s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_introspection_c.so
+[8.530s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_introspection_c.so" to ""
+[8.530s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_c.so
+[8.536s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_c.so" to ""
+[8.536s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs
+[8.538s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg
+[8.539s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail
+[8.540s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__builder.hpp
+[8.544s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__traits.hpp
+[8.548s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__struct.hpp
+[8.552s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/region_of_interest_array.hpp
+[8.555s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs
+[8.556s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg
+[8.557s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail
+[8.558s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__rosidl_typesupport_fastrtps_cpp.hpp
+[8.561s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/dds_fastrtps
+[8.563s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[8.568s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_fastrtps_cpp.so
+[8.575s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[8.575s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs
+[8.576s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg
+[8.577s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail
+[8.578s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__rosidl_typesupport_introspection_cpp.hpp
+[8.582s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/include/cs7630_msgs/cs7630_msgs/msg/detail/region_of_interest_array__type_support.cpp
+[8.589s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_introspection_cpp.so
+[8.593s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[8.594s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_cpp.so
+[8.600s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_typesupport_cpp.so" to ""
+[8.600s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/pythonpath.sh
+[8.604s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/pythonpath.dsv
+[8.607s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs-0.0.0-py3.10.egg-info
+[8.608s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[8.613s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[8.617s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[8.620s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[8.623s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs
+[8.624s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg
+[8.625s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg/_region_of_interest_array_s.c
+[8.629s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg/_region_of_interest_array.py
+[8.633s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg/__init__.py
+[8.637s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[8.641s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/libcs7630_msgs__rosidl_generator_py.so
+[8.646s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[8.650s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/_cs7630_msgs_s.ep.rosidl_typesupport_c.c
+[8.654s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[8.659s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/_cs7630_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[8.663s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/__init__.py
+[8.666s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/_cs7630_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[8.711s] Listing '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs'...
+[8.711s] Compiling '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/__init__.py'...
+[8.711s] Listing '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg'...
+[8.712s] Compiling '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg/__init__.py'...
+[8.712s] Compiling '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/msg/_region_of_interest_array.py'...
+[8.716s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[8.723s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.725s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[8.731s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.733s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[8.739s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/local/lib/python3.10/dist-packages/cs7630_msgs/cs7630_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.740s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_generator_py.so
+[8.747s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/lib/libcs7630_msgs__rosidl_generator_py.so" to ""
+[8.747s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/msg/RegionOfInterestArray.idl
+[8.751s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/msg/RegionOfInterestArray.msg
+[8.755s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/ament_index/resource_index/package_run_dependencies/cs7630_msgs
+[8.761s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/ament_index/resource_index/parent_prefix_path/cs7630_msgs
+[8.765s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/ament_prefix_path.sh
+[8.768s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/ament_prefix_path.dsv
+[8.776s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/path.sh
+[8.782s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/environment/path.dsv
+[8.787s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/local_setup.bash
+[8.791s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/local_setup.sh
+[8.795s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/local_setup.zsh
+[8.799s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/local_setup.dsv
+[8.803s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/package.dsv
+[8.808s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/ament_index/resource_index/packages/cs7630_msgs
+[8.813s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_generator_cExport.cmake
+[8.818s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_generator_cExport-noconfig.cmake
+[8.823s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[8.827s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[8.832s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_introspection_cExport.cmake
+[8.837s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[8.842s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_cExport.cmake
+[8.847s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[8.852s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_generator_cppExport.cmake
+[8.857s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[8.863s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[8.868s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[8.874s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[8.880s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_cppExport.cmake
+[8.885s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[8.890s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_generator_pyExport.cmake
+[8.895s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/export_cs7630_msgs__rosidl_generator_pyExport-noconfig.cmake
+[8.899s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/rosidl_cmake-extras.cmake
+[8.904s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.908s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.912s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[8.916s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[8.920s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[8.925s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[8.929s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgsConfig.cmake
+[8.933s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/cmake/cs7630_msgsConfig-version.cmake
+[8.937s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/cs7630_msgs/share/cs7630_msgs/package.xml
+[8.946s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/cs7630_msgs

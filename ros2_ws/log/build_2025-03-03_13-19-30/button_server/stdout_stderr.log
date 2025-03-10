@@ -1,0 +1,39 @@
+running egg_info
+writing ../../../../build/button_server/button_server.egg-info/PKG-INFO
+writing dependency_links to ../../../../build/button_server/button_server.egg-info/dependency_links.txt
+writing entry points to ../../../../build/button_server/button_server.egg-info/entry_points.txt
+writing requirements to ../../../../build/button_server/button_server.egg-info/requires.txt
+writing top-level names to ../../../../build/button_server/button_server.egg-info/top_level.txt
+writing manifest file '../../../../build/button_server/button_server.egg-info/SOURCES.txt'
+reading manifest file '../../../../build/button_server/button_server.egg-info/SOURCES.txt'
+writing manifest file '../../../../build/button_server/button_server.egg-info/SOURCES.txt'
+running build
+running build_py
+copying button_server/ButtonServer3.py -> /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/lib/button_server
+copying button_server/__init__.py -> /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/lib/button_server
+copying button_server/requesthdl3.py -> /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/lib/button_server
+running build_scripts
+copying and adjusting nodes/button_server_node -> /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/scripts-3.10
+changing mode of /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/scripts-3.10/button_server_node from 664 to 775
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+copying /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/lib/button_server/ButtonServer3.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server
+copying /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/lib/button_server/__init__.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server
+copying /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/lib/button_server/requesthdl3.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server
+byte-compiling /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server/ButtonServer3.py to ButtonServer3.cpython-310.pyc
+byte-compiling /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server/requesthdl3.py to requesthdl3.cpython-310.pyc
+running install_data
+copying resource/button_server -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/share/ament_index/resource_index/packages
+copying package.xml -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/share/button_server
+copying launch/button_server.launch -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/share/button_server/launch
+copying lib/jquery-3.6.4.min.js -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/share/button_server/lib
+running install_egg_info
+removing '/home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../../../build/button_server/button_server.egg-info to /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/python3.10/site-packages/button_server-0.0.0-py3.10.egg-info
+running install_scripts
+copying /home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/build/scripts-3.10/button_server_node -> /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/button_server
+changing mode of /home/GTL/mgaddam/CS7630/ros2_ws/install/button_server/lib/button_server/button_server_node to 775
+writing list of installed files to '/home/GTL/mgaddam/CS7630/ros2_ws/build/button_server/install.log'

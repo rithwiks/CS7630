@@ -1,0 +1,6 @@
+{
+  "package_name": "cs7630_msgs",
+  "non_idl_tuples": [
+    "/home/GTL/mgaddam/CS7630/ros2_ws/src/cs7630_msgs:msg/RegionOfInterestArray.msg"
+  ]
+}

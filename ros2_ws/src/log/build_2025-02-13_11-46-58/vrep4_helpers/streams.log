@@ -1,0 +1,76 @@
+[1.201s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/vrep4_helpers -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers
+[1.261s] -- The C compiler identification is GNU 11.4.0
+[1.313s] -- The CXX compiler identification is GNU 11.4.0
+[1.322s] -- Detecting C compiler ABI info
+[1.426s] -- Detecting C compiler ABI info - done
+[1.433s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.434s] -- Detecting C compile features
+[1.434s] -- Detecting C compile features - done
+[1.441s] -- Detecting CXX compiler ABI info
+[1.559s] -- Detecting CXX compiler ABI info - done
+[1.568s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.568s] -- Detecting CXX compile features
+[1.568s] -- Detecting CXX compile features - done
+[1.617s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.857s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.485s] -- Found depth_image_proc: 3.0.3 (/opt/ros/humble/share/depth_image_proc/cmake)
+[3.007s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.087s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.169s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.265s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.395s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.324s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.365s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[4.628s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[4.755s] -- Looking for pthread.h
+[4.857s] -- Looking for pthread.h - found
+[4.859s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.959s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.960s] -- Found Threads: TRUE  
+[6.692s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[7.196s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.197s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/GTL/mgaddam/CS7630/ros2_ws/src/vrep4_helpers/include>
+[7.197s] -- Configured cppcheck exclude dirs and/or files: 
+[7.213s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.247s] -- Added test 'lint_cmake' to check CMake code style
+[7.265s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.397s] -- Added test 'uncrustify' to check C / C++ code style
+[7.397s] -- Configured uncrustify additional arguments: 
+[7.413s] -- Added test 'xmllint' to check XML markup files
+[7.431s] -- Configuring done
+[7.543s] -- Generating done
+[7.562s] -- Build files have been written to: /home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers
+[7.570s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/vrep4_helpers -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers
+[7.577s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers -- -j16 -l16
+[7.629s] [ 50%] [32mBuilding CXX object CMakeFiles/clock_repeat.dir/src/clock_repeat.cpp.o[0m
+[7.629s] [ 50%] [32mBuilding CXX object CMakeFiles/image_flip.dir/src/image_flip.cpp.o[0m
+[14.351s] [ 75%] [32m[1mLinking CXX executable image_flip[0m
+[14.850s] [ 75%] Built target image_flip
+[22.457s] [100%] [32m[1mLinking CXX executable clock_repeat[0m
+[22.973s] [100%] Built target clock_repeat
+[22.984s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers -- -j16 -l16
+[23.010s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers
+[23.016s] -- Install configuration: ""
+[23.016s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/lib/vrep4_helpers/image_flip
+[23.032s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/lib/vrep4_helpers/image_flip" to ""
+[23.033s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/lib/vrep4_helpers/clock_repeat
+[23.142s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/lib/vrep4_helpers/clock_repeat" to ""
+[23.142s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers
+[23.143s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/kinect_pc.launch.py
+[23.147s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/kinect_pc_min.launch.py
+[23.151s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/ament_index/resource_index/package_run_dependencies/vrep4_helpers
+[23.156s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/ament_index/resource_index/parent_prefix_path/vrep4_helpers
+[23.159s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/environment/ament_prefix_path.sh
+[23.162s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/environment/ament_prefix_path.dsv
+[23.165s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/environment/path.sh
+[23.171s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/environment/path.dsv
+[23.175s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/local_setup.bash
+[23.178s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/local_setup.sh
+[23.182s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/local_setup.zsh
+[23.186s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/local_setup.dsv
+[23.190s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/package.dsv
+[23.193s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/ament_index/resource_index/packages/vrep4_helpers
+[23.197s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/cmake/vrep4_helpersConfig.cmake
+[23.200s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/cmake/vrep4_helpersConfig-version.cmake
+[23.204s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep4_helpers/share/vrep4_helpers/package.xml
+[23.210s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/vrep4_helpers

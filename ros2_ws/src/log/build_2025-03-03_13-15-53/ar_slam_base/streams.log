@@ -1,0 +1,24 @@
+[3.363s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/ar_slam_base': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:${AMENT_PREFIX_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base/lib/python3.10/site-packages:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base/lib/python3.10/site-packages:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base/lib/python3.10/site-packages:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ar_slam_base build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/install.log --single-version-externally-managed
+[3.539s] running egg_info
+[3.540s] writing ../build/ar_slam_base/ar_slam_base.egg-info/PKG-INFO
+[3.542s] writing dependency_links to ../build/ar_slam_base/ar_slam_base.egg-info/dependency_links.txt
+[3.544s] writing entry points to ../build/ar_slam_base/ar_slam_base.egg-info/entry_points.txt
+[3.545s] writing requirements to ../build/ar_slam_base/ar_slam_base.egg-info/requires.txt
+[3.546s] writing top-level names to ../build/ar_slam_base/ar_slam_base.egg-info/top_level.txt
+[3.555s] reading manifest file '../build/ar_slam_base/ar_slam_base.egg-info/SOURCES.txt'
+[3.604s] writing manifest file '../build/ar_slam_base/ar_slam_base.egg-info/SOURCES.txt'
+[3.606s] running build
+[3.606s] running build_py
+[3.610s] running install
+[3.610s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.610s]   warnings.warn(
+[3.610s] running install_lib
+[3.614s] running install_data
+[3.618s] running install_egg_info
+[3.619s] removing '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base/lib/python3.10/site-packages/ar_slam_base-0.0.0-py3.10.egg-info' (and everything under it)
+[3.623s] Copying ../build/ar_slam_base/ar_slam_base.egg-info to /home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base/lib/python3.10/site-packages/ar_slam_base-0.0.0-py3.10.egg-info
+[3.660s] running install_scripts
+[3.673s] Installing ar_slam_node script to /home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base/lib/ar_slam_base
+[3.676s] Installing tb_slam_node script to /home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base/lib/ar_slam_base
+[3.679s] writing list of installed files to '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/install.log'
+[3.693s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/ar_slam_base' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:${AMENT_PREFIX_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base/lib/python3.10/site-packages:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base/lib/python3.10/site-packages:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base/lib/python3.10/site-packages:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ar_slam_base build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_slam_base/install.log --single-version-externally-managed

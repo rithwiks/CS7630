@@ -1,0 +1,39 @@
+[1.926s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/vrep_ros_teleop': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/vrep_ros_teleop build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/install.log --single-version-externally-managed
+[2.135s] running egg_info
+[2.136s] writing ../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/PKG-INFO
+[2.138s] writing dependency_links to ../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/dependency_links.txt
+[2.139s] writing entry points to ../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/entry_points.txt
+[2.140s] writing requirements to ../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/requires.txt
+[2.141s] writing top-level names to ../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/top_level.txt
+[2.142s] writing manifest file '../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/SOURCES.txt'
+[2.147s] reading manifest file '../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/SOURCES.txt'
+[2.148s] writing manifest file '../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info/SOURCES.txt'
+[2.149s] running build
+[2.149s] running build_py
+[2.150s] copying vrep_ros_teleop/teleop.py -> /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build/lib/vrep_ros_teleop
+[2.153s] copying vrep_ros_teleop/__init__.py -> /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build/lib/vrep_ros_teleop
+[2.154s] copying vrep_ros_teleop/teleop_mux.py -> /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build/lib/vrep_ros_teleop
+[2.156s] running install
+[2.156s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.156s]   warnings.warn(
+[2.156s] running install_lib
+[2.158s] copying /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build/lib/vrep_ros_teleop/teleop.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop
+[2.160s] copying /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build/lib/vrep_ros_teleop/__init__.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop
+[2.162s] copying /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build/lib/vrep_ros_teleop/teleop_mux.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop
+[2.164s] byte-compiling /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop/teleop.py to teleop.cpython-310.pyc
+[2.167s] byte-compiling /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop/__init__.py to __init__.cpython-310.pyc
+[2.169s] byte-compiling /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop/teleop_mux.py to teleop_mux.cpython-310.pyc
+[2.172s] running install_data
+[2.173s] copying resource/vrep_ros_teleop -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/share/ament_index/resource_index/packages
+[2.174s] copying package.xml -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/share/vrep_ros_teleop
+[2.176s] copying launch/teleop.launch.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/share/vrep_ros_teleop
+[2.178s] copying launch/teleop_mux_tb.launch.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/share/vrep_ros_teleop
+[2.181s] copying launch/teleop_mux.launch.py -> /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/share/vrep_ros_teleop
+[2.183s] running install_egg_info
+[2.184s] removing '/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop-0.0.0-py3.10.egg-info' (and everything under it)
+[2.185s] Copying ../../build/vrep_ros_teleop/vrep_ros_teleop.egg-info to /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages/vrep_ros_teleop-0.0.0-py3.10.egg-info
+[2.204s] running install_scripts
+[2.221s] Installing teleop_mux_node script to /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/vrep_ros_teleop
+[2.222s] Installing teleop_node script to /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/vrep_ros_teleop
+[2.224s] writing list of installed files to '/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/install.log'
+[2.310s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/vrep_ros_teleop' returned '0': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/vrep_ros_teleop build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep_ros_teleop/install.log --single-version-externally-managed

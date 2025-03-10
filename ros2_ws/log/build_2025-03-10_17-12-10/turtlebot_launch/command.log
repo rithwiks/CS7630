@@ -1,0 +1,5 @@
+Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/turtlebot_launch -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/install/turtlebot_launch
+Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/turtlebot_launch -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/install/turtlebot_launch
+Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch -- -j16 -l16
+Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch -- -j16 -l16
+Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/turtlebot_launch

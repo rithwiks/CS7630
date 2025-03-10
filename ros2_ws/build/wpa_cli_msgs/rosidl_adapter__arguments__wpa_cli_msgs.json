@@ -1,0 +1,7 @@
+{
+  "package_name": "wpa_cli_msgs",
+  "non_idl_tuples": [
+    "/home/GTL/mgaddam/CS7630/ros2_ws/src/wpa_cli_msgs:msg/Network.msg",
+    "/home/GTL/mgaddam/CS7630/ros2_ws/src/wpa_cli_msgs:msg/Scan.msg"
+  ]
+}

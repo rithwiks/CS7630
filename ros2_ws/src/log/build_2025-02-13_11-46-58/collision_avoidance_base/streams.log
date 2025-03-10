@@ -1,0 +1,87 @@
+[1.072s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/collision_avoidance -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base
+[1.338s] -- The C compiler identification is GNU 11.4.0
+[1.338s] -- The CXX compiler identification is GNU 11.4.0
+[1.338s] -- Detecting C compiler ABI info
+[1.338s] -- Detecting C compiler ABI info - done
+[1.338s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.338s] -- Detecting C compile features
+[1.338s] -- Detecting C compile features - done
+[1.338s] -- Detecting CXX compiler ABI info
+[1.418s] -- Detecting CXX compiler ABI info - done
+[1.427s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.427s] -- Detecting CXX compile features
+[1.427s] -- Detecting CXX compile features - done
+[1.472s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.681s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.336s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[2.785s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.864s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.946s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.035s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.166s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.600s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.641s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[3.902s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[4.033s] -- Looking for pthread.h
+[4.136s] -- Looking for pthread.h - found
+[4.138s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.239s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.240s] -- Found Threads: TRUE  
+[4.534s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.725s] -- Checking for module 'eigen3'
+[4.736s] --   Found eigen3, version 3.4.0
+[4.767s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[4.767s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[5.167s] -- Checking for module 'libusb-1.0'
+[5.174s] --   Found libusb-1.0, version 1.0.25
+[5.196s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[5.197s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.232s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[6.360s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[6.361s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[6.362s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[6.362s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[6.414s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[6.740s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[7.134s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.134s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/GTL/mgaddam/CS7630/ros2_ws/src/collision_avoidance/include>
+[7.134s] -- Configured cppcheck exclude dirs and/or files: 
+[7.135s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.137s] -- Added test 'lint_cmake' to check CMake code style
+[7.138s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.145s] -- Added test 'uncrustify' to check C / C++ code style
+[7.145s] -- Configured uncrustify additional arguments: 
+[7.146s] -- Added test 'xmllint' to check XML markup files
+[7.173s] -- Configuring done
+[7.249s] -- Generating done
+[7.265s] -- Build files have been written to: /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base
+[7.276s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake /home/GTL/mgaddam/CS7630/ros2_ws/src/collision_avoidance -DCMAKE_INSTALL_PREFIX=/home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base
+[7.277s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base -- -j16 -l16
+[7.335s] [ 50%] [32mBuilding CXX object CMakeFiles/collision_avoidance_base.dir/src/collision_avoidance.cpp.o[0m
+[35.576s] [100%] [32m[1mLinking CXX executable collision_avoidance_base[0m
+[40.874s] [100%] Built target collision_avoidance_base
+[40.883s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base -- -j16 -l16
+[40.906s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base
+[40.911s] -- Install configuration: ""
+[40.911s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/lib/collision_avoidance_base/collision_avoidance_base
+[41.149s] -- Set runtime path of "/home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/lib/collision_avoidance_base/collision_avoidance_base" to ""
+[41.149s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base
+[41.150s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/ca_auto.launch.py
+[41.154s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/ca.launch.py
+[41.158s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/ament_index/resource_index/package_run_dependencies/collision_avoidance_base
+[41.162s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/ament_index/resource_index/parent_prefix_path/collision_avoidance_base
+[41.165s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/ament_prefix_path.sh
+[41.169s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/ament_prefix_path.dsv
+[41.172s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/path.sh
+[41.176s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/path.dsv
+[41.179s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.bash
+[41.183s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.sh
+[41.186s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.zsh
+[41.190s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.dsv
+[41.195s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/package.dsv
+[41.198s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/ament_index/resource_index/packages/collision_avoidance_base
+[41.202s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/cmake/ament_cmake_export_include_directories-extras.cmake
+[41.206s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/cmake/collision_avoidance_baseConfig.cmake
+[41.210s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/cmake/collision_avoidance_baseConfig-version.cmake
+[41.214s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/package.xml
+[41.220s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base

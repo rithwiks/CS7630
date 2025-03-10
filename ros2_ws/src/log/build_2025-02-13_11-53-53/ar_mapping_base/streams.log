@@ -1,0 +1,23 @@
+[2.749s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/ar_mapping_base': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ar_mapping_base build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/install.log --single-version-externally-managed
+[2.962s] running egg_info
+[2.963s] writing ../build/ar_mapping_base/ar_mapping_base.egg-info/PKG-INFO
+[2.965s] writing dependency_links to ../build/ar_mapping_base/ar_mapping_base.egg-info/dependency_links.txt
+[2.967s] writing entry points to ../build/ar_mapping_base/ar_mapping_base.egg-info/entry_points.txt
+[2.968s] writing requirements to ../build/ar_mapping_base/ar_mapping_base.egg-info/requires.txt
+[2.969s] writing top-level names to ../build/ar_mapping_base/ar_mapping_base.egg-info/top_level.txt
+[2.974s] reading manifest file '../build/ar_mapping_base/ar_mapping_base.egg-info/SOURCES.txt'
+[2.981s] writing manifest file '../build/ar_mapping_base/ar_mapping_base.egg-info/SOURCES.txt'
+[2.982s] running build
+[2.982s] running build_py
+[2.982s] running install
+[2.982s] running install_lib
+[2.982s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.982s]   warnings.warn(
+[2.986s] running install_data
+[2.988s] running install_egg_info
+[2.989s] removing '/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/python3.10/site-packages/ar_mapping_base-0.0.0-py3.10.egg-info' (and everything under it)
+[2.992s] Copying ../build/ar_mapping_base/ar_mapping_base.egg-info to /home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/python3.10/site-packages/ar_mapping_base-0.0.0-py3.10.egg-info
+[3.012s] running install_scripts
+[3.038s] Installing ar_mapping_node script to /home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/ar_mapping_base
+[3.041s] writing list of installed files to '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/install.log'
+[3.554s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/ar_mapping_base' returned '0': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/src/install/ar_mapping_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ar_mapping_base build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/src/build/ar_mapping_base/install.log --single-version-externally-managed

@@ -1,0 +1,35 @@
+[0.231s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync -- -j16 -l16
+[0.531s] [ 71%] Built target task_manager_sync_lib
+[0.706s] [100%] Built target test_server_sync
+[0.721s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync -- -j16 -l16
+[0.832s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync
+[0.838s] -- Install configuration: ""
+[0.866s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/lib/libtask_manager_sync_lib.so
+[0.869s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/include/task_manager_sync
+[0.870s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/include/task_manager_sync/TaskWaitForStatusSync.h
+[0.870s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/include/task_manager_sync/TaskEnvironmentSync.h
+[0.871s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/include/task_manager_sync/TaskSetStatusSync.h
+[0.872s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/include/task_manager_sync/TaskServerSync.h
+[0.873s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync
+[0.874s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/launch_server.launch
+[0.875s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/environment/library_path.sh
+[0.876s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/environment/library_path.dsv
+[0.878s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/ament_index/resource_index/package_run_dependencies/task_manager_sync
+[0.878s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/ament_index/resource_index/parent_prefix_path/task_manager_sync
+[0.879s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/environment/ament_prefix_path.sh
+[0.880s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/environment/ament_prefix_path.dsv
+[0.881s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/environment/path.sh
+[0.882s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/environment/path.dsv
+[0.882s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/local_setup.bash
+[0.883s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/local_setup.sh
+[0.883s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/local_setup.zsh
+[0.884s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/local_setup.dsv
+[0.885s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/package.dsv
+[0.913s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/ament_index/resource_index/packages/task_manager_sync
+[0.914s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.914s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.915s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/cmake/ament_cmake_export_libraries-extras.cmake
+[0.916s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/cmake/task_manager_syncConfig.cmake
+[0.917s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/cmake/task_manager_syncConfig-version.cmake
+[0.917s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_sync/share/task_manager_sync/package.xml
+[1.274s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/task_manager_sync

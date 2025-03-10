@@ -1,0 +1,27 @@
+[1.161s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers -- -j16 -l16
+[1.374s] [ 50%] Built target image_flip
+[1.374s] [100%] Built target clock_repeat
+[1.398s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers -- -j16 -l16
+[1.424s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers
+[1.431s] -- Install configuration: ""
+[1.479s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/lib/vrep4_helpers/image_flip
+[1.810s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/lib/vrep4_helpers/clock_repeat
+[1.913s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers
+[2.124s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/kinect_pc.launch.py
+[2.126s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/kinect_pc_min.launch.py
+[2.127s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/ament_index/resource_index/package_run_dependencies/vrep4_helpers
+[2.128s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/ament_index/resource_index/parent_prefix_path/vrep4_helpers
+[2.129s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/environment/ament_prefix_path.sh
+[2.129s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/environment/ament_prefix_path.dsv
+[2.130s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/environment/path.sh
+[2.131s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/environment/path.dsv
+[2.131s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/local_setup.bash
+[2.132s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/local_setup.sh
+[2.132s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/local_setup.zsh
+[2.133s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/local_setup.dsv
+[2.134s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/package.dsv
+[2.143s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/ament_index/resource_index/packages/vrep4_helpers
+[2.143s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/cmake/vrep4_helpersConfig.cmake
+[2.143s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/cmake/vrep4_helpersConfig-version.cmake
+[2.144s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/vrep4_helpers/share/vrep4_helpers/package.xml
+[2.172s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/vrep4_helpers

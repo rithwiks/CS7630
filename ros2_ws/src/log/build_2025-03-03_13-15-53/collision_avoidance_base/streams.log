@@ -1,0 +1,26 @@
+[1.092s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base -- -j16 -l16
+[1.338s] [100%] Built target collision_avoidance_base
+[1.580s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base -- -j16 -l16
+[1.601s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base
+[1.606s] -- Install configuration: ""
+[1.657s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/lib/collision_avoidance_base/collision_avoidance_base
+[1.660s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base
+[1.661s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/ca_auto.launch.py
+[1.662s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/ca.launch.py
+[1.663s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/ament_index/resource_index/package_run_dependencies/collision_avoidance_base
+[1.664s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/ament_index/resource_index/parent_prefix_path/collision_avoidance_base
+[1.664s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/ament_prefix_path.sh
+[1.665s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/ament_prefix_path.dsv
+[1.666s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/path.sh
+[1.667s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/environment/path.dsv
+[1.667s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.bash
+[1.668s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.sh
+[1.668s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.zsh
+[1.669s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/local_setup.dsv
+[1.670s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/package.dsv
+[1.675s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/ament_index/resource_index/packages/collision_avoidance_base
+[1.675s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.676s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/cmake/collision_avoidance_baseConfig.cmake
+[1.676s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/cmake/collision_avoidance_baseConfig-version.cmake
+[1.677s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/src/install/collision_avoidance_base/share/collision_avoidance_base/package.xml
+[1.680s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/src/build/collision_avoidance_base
