@@ -112,7 +112,7 @@ class WifiMapNode : public rclcpp::Node {
                         float x = j - winsize/2;
 
                         // TODO 1: Affect a weight to i,j as a function of x,y. Weights should be in [0,1]
-                        weights_(i,j) = hypot(x,y) / hypot(winsize/2,winsize/2);
+                        weights_(i,j) = exp((x*x + y*y) / (winsize / 2)*(winsize/2));
                     }
                 }
                 cv::imwrite("weights.png",weights_*255);
@@ -134,8 +134,8 @@ class WifiMapNode : public rclcpp::Node {
             // TODO Initialise mat.
             // In the end, every pixel should contain sum(w_i s_i) / sum(w_i)
 
-            cv::Mat_<float> example_float_mat(info_.height, info_.width,0.0);
-            cv::Mat_<uint8_t> example_byte_mat(info_.height, info_.width,uint8_t(0));
+            cv::Mat_<float> numerator(info_.height, info_.width,0.0);
+            cv::Mat_<float> denominator(info_.height, info_.width,0.0);
             RCLCPP_INFO(this->get_logger(),"Bssid %s has received %d measurements",it->first.c_str(),int(it->second.size()));
             for (size_t i=0;i<it->second.size();i++) {
                 const WifiStrength & ws = it->second[i];
@@ -143,8 +143,9 @@ class WifiMapNode : public rclcpp::Node {
                 // TODO 2: handle measurement i at position (ws.x,ws.y) with value intensity
                 // You should use addWeightedWindow to add a smoothly weighted signal around (ws.x,ws.y).
                 // Example usage:
-                cv::Point2i where(info_.width/2,info_.height/2);
-                addWeightedWindow(example_float_mat, weights_ * 5.0, where);
+                cv::Point2i where(ws.x, ws.y);
+                addWeightedWindow(numerator, weights_ * intensity, where);
+                addWeightedWindow(denominator, weights_, where);
             }
 
             // og_mat needs to be a clone of og_ for info_ to make sense
@@ -157,8 +158,16 @@ class WifiMapNode : public rclcpp::Node {
                     // og_(j,i) can be OCCUPIED, FREE, UNKNOWN
 
                     // Example affectation for an unknown value
-                    og_mat(j,i) = example_float_mat(j,i);
-
+                    float val = numerator(j, i) / denominator(j, i);
+                    if (og_(j, i) == OCCUPIED) {
+                        og_mat(j, i) = NULL;
+                    } else if (val < .005) {
+                        og_mat(j, i) = UNKNOWN;
+                        og_(j, i) = UNKNOWN;
+                    } else {
+                        og_mat(j, i) = val;
+                        og_(j, i) = FREE;
+                    }
                 }
             }
 
