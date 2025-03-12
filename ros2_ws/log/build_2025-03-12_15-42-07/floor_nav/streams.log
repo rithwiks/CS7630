@@ -1,0 +1,67 @@
+[0.532s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav -- -j16 -l16
+[1.362s] [ 29%] Built target floornav_TaskGoTo
+[1.362s] [ 29%] Built target floornav_TaskTrigger
+[1.362s] [ 29%] Built target floornav_TaskWaitForFace
+[1.363s] [ 45%] Built target floornav_TaskNav2
+[1.367s] [ 45%] Built target floornav_TaskSetBool
+[1.370s] [ 64%] Built target floornav_TaskGoToPose
+[1.370s] [ 64%] Built target floornav_TaskWaitForROI
+[1.372s] [ 74%] Built target floornav_TaskAutoDock
+[1.372s] [ 74%] Built target floornav_TaskSetMux
+[1.372s] [ 74%] Built target floornav_TaskConstant
+[1.372s] [ 80%] Built target floornav_TaskWander
+[1.372s] [ 80%] Built target floornav_task_server
+[1.388s] [ 87%] Built target floornav_TaskStareAtFace
+[1.397s] [ 93%] Built target floornav_TaskPlanTo
+[1.745s] [100%] Built target floornav_TaskSetHeading
+[1.763s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav -- -j16 -l16
+[1.826s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav
+[2.012s] -- Install configuration: ""
+[2.232s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/floornav_task_server
+[2.326s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskAutoDock.so
+[2.403s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskWaitForROI.so
+[2.465s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskWaitForFace.so
+[2.507s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskWander.so
+[2.575s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskSetHeading.so
+[2.660s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskStareAtFace.so
+[2.705s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskPlanTo.so
+[2.730s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskGoTo.so
+[2.767s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskConstant.so
+[2.790s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskTrigger.so
+[2.808s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskSetBool.so
+[2.846s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskSetMux.so
+[2.864s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskNav2.so
+[2.903s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/libfloornav_TaskGoToPose.so
+[2.907s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav
+[2.909s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/launch_server_tb.launch.py
+[2.911s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/launch_rover.launch.py
+[2.912s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/launch_server_tb.launch
+[2.913s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/__pycache__
+[2.914s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/__pycache__/launch_server_tb.launch.cpython-310.pyc
+[2.915s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/launch_server.launch
+[2.917s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/graph_forever.py
+[2.918s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_goto.py
+[2.919s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_goto_pose.py
+[2.920s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_graph_2d.py
+[2.921s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_graph.py
+[2.922s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_graph-test.py
+[2.923s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_planto.py
+[2.925s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_set_heading.py
+[2.926s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/test_wander.py
+[2.927s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/lib/floor_nav/wander_random_and_stare.py
+[2.928s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/ament_index/resource_index/package_run_dependencies/floor_nav
+[2.929s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/ament_index/resource_index/parent_prefix_path/floor_nav
+[2.930s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/environment/ament_prefix_path.sh
+[2.931s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/environment/ament_prefix_path.dsv
+[2.932s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/environment/path.sh
+[2.933s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/environment/path.dsv
+[2.933s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/local_setup.bash
+[2.935s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/local_setup.sh
+[2.935s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/local_setup.zsh
+[2.936s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/local_setup.dsv
+[2.937s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/package.dsv
+[2.952s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/ament_index/resource_index/packages/floor_nav
+[2.953s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/cmake/floor_navConfig.cmake
+[2.953s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/cmake/floor_navConfig-version.cmake
+[2.954s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/floor_nav/share/floor_nav/package.xml
+[2.958s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_nav2:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_lib/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/lib:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_msgs/local/lib/python3.10/dist-packages:/home/GTL/mgaddam/CS7630/ros2_ws/install/cs7630_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/floor_nav

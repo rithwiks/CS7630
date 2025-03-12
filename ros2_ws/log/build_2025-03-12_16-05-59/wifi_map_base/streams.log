@@ -1,0 +1,25 @@
+[0.720s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base -- -j16 -l16
+[0.771s] [100%] Built target wifi_map_node
+[1.211s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base -- -j16 -l16
+[1.228s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base
+[1.233s] -- Install configuration: ""
+[1.234s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/lib/wifi_map_base/wifi_map_node
+[1.236s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base
+[1.238s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/wifi_map.launch.py
+[1.239s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/wifi_map_sim.launch.py
+[1.239s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/ament_index/resource_index/package_run_dependencies/wifi_map_base
+[1.240s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/ament_index/resource_index/parent_prefix_path/wifi_map_base
+[1.241s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/environment/ament_prefix_path.sh
+[1.242s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/environment/ament_prefix_path.dsv
+[1.242s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/environment/path.sh
+[1.247s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/environment/path.dsv
+[1.247s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/local_setup.bash
+[1.247s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/local_setup.sh
+[1.247s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/local_setup.zsh
+[1.247s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/local_setup.dsv
+[1.247s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/package.dsv
+[1.251s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/ament_index/resource_index/packages/wifi_map_base
+[1.252s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/cmake/wifi_map_baseConfig.cmake
+[1.253s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/cmake/wifi_map_baseConfig-version.cmake
+[1.253s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wifi_map_base/share/wifi_map_base/package.xml
+[1.256s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base' returned '0': AMENT_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/wifi_map_base

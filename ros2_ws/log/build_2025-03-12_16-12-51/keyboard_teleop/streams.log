@@ -1,0 +1,24 @@
+[2.705s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/keyboard_teleop': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/keyboard_teleop build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/install.log --single-version-externally-managed
+[2.931s] running egg_info
+[2.931s] writing ../../build/keyboard_teleop/keyboard_teleop.egg-info/PKG-INFO
+[2.933s] writing dependency_links to ../../build/keyboard_teleop/keyboard_teleop.egg-info/dependency_links.txt
+[2.934s] writing entry points to ../../build/keyboard_teleop/keyboard_teleop.egg-info/entry_points.txt
+[2.934s] writing requirements to ../../build/keyboard_teleop/keyboard_teleop.egg-info/requires.txt
+[2.935s] writing top-level names to ../../build/keyboard_teleop/keyboard_teleop.egg-info/top_level.txt
+[2.941s] reading manifest file '../../build/keyboard_teleop/keyboard_teleop.egg-info/SOURCES.txt'
+[2.943s] writing manifest file '../../build/keyboard_teleop/keyboard_teleop.egg-info/SOURCES.txt'
+[2.943s] running build
+[2.944s] running build_py
+[2.949s] running install
+[2.949s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.949s]   warnings.warn(
+[2.949s] running install_lib
+[2.957s] running install_data
+[2.958s] running install_egg_info
+[2.959s] removing '/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop/lib/python3.10/site-packages/keyboard_teleop-0.0.0-py3.10.egg-info' (and everything under it)
+[2.963s] Copying ../../build/keyboard_teleop/keyboard_teleop.egg-info to /home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop/lib/python3.10/site-packages/keyboard_teleop-0.0.0-py3.10.egg-info
+[2.985s] running install_scripts
+[3.004s] Installing keyboard_joystick_node script to /home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop/lib/keyboard_teleop
+[3.005s] Installing keyboard_teleop_node script to /home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop/lib/keyboard_teleop
+[3.008s] writing list of installed files to '/home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/install.log'
+[3.708s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/keyboard_teleop' returned '0': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/keyboard_teleop build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/build/keyboard_teleop/install.log --single-version-externally-managed

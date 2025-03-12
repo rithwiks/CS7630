@@ -26,6 +26,10 @@ def generate_launch_description():
           slam_params_file,
           {'use_sim_time': use_sim_time}
         ],
+        # package='ar_slam_base',
+        # executable='ar_slam_node',
+        # name='slam_toolbox',
+        # output='screen')
         package='slam_toolbox',
         executable='sync_slam_toolbox_node',
         name='slam_toolbox',

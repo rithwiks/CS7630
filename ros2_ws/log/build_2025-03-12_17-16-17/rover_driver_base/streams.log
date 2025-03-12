@@ -1,0 +1,24 @@
+[3.355s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/rover_driver_base': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rover_driver_base build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/install.log --single-version-externally-managed
+[3.605s] running egg_info
+[3.606s] writing ../../build/rover_driver_base/rover_driver_base.egg-info/PKG-INFO
+[3.607s] writing dependency_links to ../../build/rover_driver_base/rover_driver_base.egg-info/dependency_links.txt
+[3.607s] writing entry points to ../../build/rover_driver_base/rover_driver_base.egg-info/entry_points.txt
+[3.608s] writing requirements to ../../build/rover_driver_base/rover_driver_base.egg-info/requires.txt
+[3.609s] writing top-level names to ../../build/rover_driver_base/rover_driver_base.egg-info/top_level.txt
+[3.613s] reading manifest file '../../build/rover_driver_base/rover_driver_base.egg-info/SOURCES.txt'
+[3.615s] writing manifest file '../../build/rover_driver_base/rover_driver_base.egg-info/SOURCES.txt'
+[3.615s] running build
+[3.615s] running build_py
+[3.618s] running install
+[3.618s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.618s]   warnings.warn(
+[3.618s] running install_lib
+[3.622s] running install_data
+[3.624s] running install_egg_info
+[3.625s] removing '/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base/lib/python3.10/site-packages/rover_driver_base-0.0.0-py3.10.egg-info' (and everything under it)
+[3.628s] Copying ../../build/rover_driver_base/rover_driver_base.egg-info to /home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base/lib/python3.10/site-packages/rover_driver_base-0.0.0-py3.10.egg-info
+[3.647s] running install_scripts
+[3.664s] Installing rover_command_node script to /home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base/lib/rover_driver_base
+[3.666s] Installing rover_odom_node script to /home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base/lib/rover_driver_base
+[3.667s] writing list of installed files to '/home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/install.log'
+[4.465s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/src/rover_driver_base' returned '0': PYTHONPATH=/home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/prefix_override:/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rover_driver_base build --build-base /home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/build install --record /home/GTL/mgaddam/CS7630/ros2_ws/build/rover_driver_base/install.log --single-version-externally-managed

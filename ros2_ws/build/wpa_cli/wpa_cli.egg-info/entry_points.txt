@@ -1,0 +1,5 @@
+[console_scripts]
+wpa_cli_const = wpa_cli.wpa_cli_const:main
+wpa_cli_node = wpa_cli.wpa_cli_node:main
+wpa_cli_sim = wpa_cli.wpa_cli_sim:main
+

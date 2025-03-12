@@ -1,0 +1,17 @@
+[01m[K/home/GTL/mgaddam/CS7630/ros2_ws/src/wifi_map_base/src/wifi_map_node.cpp:[m[K In member function ‘[01m[Kvoid WifiMapNode::wifi_callback(wpa_cli_msgs::msg::Scan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/GTL/mgaddam/CS7630/ros2_ws/src/wifi_map_base/src/wifi_map_node.cpp:146:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kinfo[m[K’ was not declared in this scope; did you mean ‘[01m[Kinfo_[m[K’?
+  146 |                 cv::Point2i where(ws.x / [01;31m[Kinfo[m[K.resolution, ws.y / info.resolution);
+      |                                          [01;31m[K^~~~[m[K
+      |                                          [32m[Kinfo_[m[K
+[01m[K/home/GTL/mgaddam/CS7630/ros2_ws/src/wifi_map_base/src/wifi_map_node.cpp:163:40:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kunsigned char[m[K’ from NULL [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wconversion-null-Wconversion-null]8;;[m[K]
+  163 |                         og_mat(j, i) = [01;35m[KNULL[m[K;
+      |                                        [01;35m[K^~~~[m[K
+[01m[K/home/GTL/mgaddam/CS7630/ros2_ws/src/wifi_map_base/src/wifi_map_node.cpp:153:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kog_min[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  153 |             int [01;35m[Kog_min[m[K=255, og_max=0;
+      |                 [01;35m[K^~~~~~[m[K
+[01m[K/home/GTL/mgaddam/CS7630/ros2_ws/src/wifi_map_base/src/wifi_map_node.cpp:153:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kog_max[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  153 |             int og_min=255, [01;35m[Kog_max[m[K=0;
+      |                             [01;35m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/wifi_map_node.dir/build.make:76: CMakeFiles/wifi_map_node.dir/src/wifi_map_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/wifi_map_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

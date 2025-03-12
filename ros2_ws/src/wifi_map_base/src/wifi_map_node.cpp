@@ -143,9 +143,9 @@ class WifiMapNode : public rclcpp::Node {
                 // TODO 2: handle measurement i at position (ws.x,ws.y) with value intensity
                 // You should use addWeightedWindow to add a smoothly weighted signal around (ws.x,ws.y).
                 // Example usage:
-                cv::Point2i where(ws.x, ws.y);
-                addWeightedWindow(numerator, weights_ * intensity, where);
-                addWeightedWindow(denominator, weights_, where);
+                cv::Point2i where(ws.x / info_.resolution, ws.y / info_.resolution);
+                addWeightedWindow(numerator, weights_ * intensity, where + og_center_);
+                addWeightedWindow(denominator, weights_, where + og_center_);
             }
 
             // og_mat needs to be a clone of og_ for info_ to make sense
@@ -160,13 +160,13 @@ class WifiMapNode : public rclcpp::Node {
                     // Example affectation for an unknown value
                     float val = numerator(j, i) / denominator(j, i);
                     if (og_(j, i) == OCCUPIED) {
-                        og_mat(j, i) = NULL;
-                    } else if (val < .005) {
+                        og_mat(j, i) = OCCUPIED;
+                    } else if (val < .005 || denominator(j, i) == 0) {
                         og_mat(j, i) = UNKNOWN;
                         og_(j, i) = UNKNOWN;
                     } else {
-                        og_mat(j, i) = val;
-                        og_(j, i) = FREE;
+                        og_mat(j, i) = static_cast<uint8_t>(std::min(100.0f, val)); 
+                        og_(j, i) = static_cast<uint8_t>(std::min(100.0f, val)); 
                     }
                 }
             }

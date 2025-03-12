@@ -1,0 +1,161 @@
+[1.013s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli:/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs -- -j16 -l16
+[1.906s] [  2%] Built target wpa_cli_msgs__cpp
+[1.906s] [ 12%] Built target wpa_cli_msgs__rosidl_generator_c
+[1.906s] [ 51%] Built target wpa_cli_msgs__rosidl_typesupport_fastrtps_cpp
+[1.906s] [ 51%] Built target wpa_cli_msgs__rosidl_typesupport_introspection_cpp
+[1.906s] [ 58%] Built target wpa_cli_msgs__rosidl_typesupport_cpp
+[1.906s] [ 74%] Built target wpa_cli_msgs__rosidl_typesupport_c
+[1.906s] [ 74%] Built target wpa_cli_msgs__rosidl_typesupport_fastrtps_c
+[1.906s] [ 74%] Built target wpa_cli_msgs__rosidl_typesupport_introspection_c
+[1.906s] [ 74%] Built target ament_cmake_python_copy_wpa_cli_msgs
+[1.906s] [ 74%] Built target wpa_cli_msgs
+[1.907s] [ 76%] Built target wpa_cli_msgs__py
+[1.907s] [ 84%] Built target wpa_cli_msgs__rosidl_generator_py
+[1.907s] [100%] Built target wpa_cli_msgs__rosidl_typesupport_introspection_c__pyext
+[1.907s] [100%] Built target wpa_cli_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.907s] [100%] Built target wpa_cli_msgs__rosidl_typesupport_c__pyext
+[1.907s] running egg_info
+[1.907s] writing wpa_cli_msgs.egg-info/PKG-INFO
+[1.907s] writing dependency_links to wpa_cli_msgs.egg-info/dependency_links.txt
+[1.907s] writing top-level names to wpa_cli_msgs.egg-info/top_level.txt
+[1.907s] reading manifest file 'wpa_cli_msgs.egg-info/SOURCES.txt'
+[1.907s] writing manifest file 'wpa_cli_msgs.egg-info/SOURCES.txt'
+[1.907s] [100%] Built target ament_cmake_python_build_wpa_cli_msgs_egg
+[2.203s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli:/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --build /home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs -- -j16 -l16
+[2.268s] Invoking command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli:/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs
+[2.273s] -- Install configuration: ""
+[2.273s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/ament_index/resource_index/rosidl_interfaces/wpa_cli_msgs
+[2.273s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs
+[2.274s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg
+[2.274s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail
+[2.275s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__functions.h
+[2.275s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__type_support.h
+[2.276s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__struct.h
+[2.276s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__type_support.h
+[2.276s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__functions.c
+[2.277s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__functions.h
+[2.277s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__functions.c
+[2.277s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__struct.h
+[2.277s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.277s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/scan.h
+[2.278s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/network.h
+[2.278s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/library_path.sh
+[2.278s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/library_path.dsv
+[2.280s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_generator_c.so
+[2.283s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs
+[2.284s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg
+[2.285s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail
+[2.285s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__rosidl_typesupport_fastrtps_c.h
+[2.286s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__rosidl_typesupport_fastrtps_c.h
+[2.286s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.286s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_typesupport_fastrtps_c.so
+[2.289s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs
+[2.290s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg
+[2.290s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail
+[2.291s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__builder.hpp
+[2.291s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__struct.hpp
+[2.292s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__traits.hpp
+[2.292s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__struct.hpp
+[2.292s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__builder.hpp
+[2.293s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__traits.hpp
+[2.293s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/scan.hpp
+[2.293s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/network.hpp
+[2.293s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs
+[2.294s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg
+[2.295s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail
+[2.297s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__rosidl_typesupport_fastrtps_cpp.hpp
+[2.297s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/dds_fastrtps
+[2.297s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__rosidl_typesupport_fastrtps_cpp.hpp
+[2.297s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.300s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.301s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs
+[2.302s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg
+[2.303s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail
+[2.303s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__rosidl_typesupport_introspection_c.h
+[2.304s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__type_support.c
+[2.304s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__type_support.c
+[2.304s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__rosidl_typesupport_introspection_c.h
+[2.304s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.307s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_typesupport_introspection_c.so
+[2.311s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_typesupport_c.so
+[2.312s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs
+[2.313s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg
+[2.314s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail
+[2.315s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__rosidl_typesupport_introspection_cpp.hpp
+[2.315s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__rosidl_typesupport_introspection_cpp.hpp
+[2.316s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/network__type_support.cpp
+[2.316s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/include/wpa_cli_msgs/wpa_cli_msgs/msg/detail/scan__type_support.cpp
+[2.317s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_typesupport_introspection_cpp.so
+[2.320s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_typesupport_cpp.so
+[2.322s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/pythonpath.sh
+[2.322s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/pythonpath.dsv
+[2.322s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs-0.0.0-py3.10.egg-info
+[2.324s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.328s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[2.333s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[2.337s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.342s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs
+[2.342s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/wpa_cli_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.343s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/_wpa_cli_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[2.343s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg
+[2.343s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg/_scan.py
+[2.344s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg/__init__.py
+[2.344s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg/_network_s.c
+[2.344s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg/_scan_s.c
+[2.344s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg/_network.py
+[2.345s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/_wpa_cli_msgs_s.ep.rosidl_typesupport_c.c
+[2.345s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/wpa_cli_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.345s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/libwpa_cli_msgs__rosidl_generator_py.so
+[2.346s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/_wpa_cli_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.346s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/__init__.py
+[2.346s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/wpa_cli_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.379s] Listing '/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs'...
+[2.379s] Listing '/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/msg'...
+[2.384s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/wpa_cli_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.388s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/wpa_cli_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.392s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/local/lib/python3.10/dist-packages/wpa_cli_msgs/wpa_cli_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.396s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/lib/libwpa_cli_msgs__rosidl_generator_py.so
+[2.398s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/msg/Network.idl
+[2.398s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/msg/Scan.idl
+[2.398s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/msg/Network.msg
+[2.398s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/msg/Scan.msg
+[2.399s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/ament_index/resource_index/package_run_dependencies/wpa_cli_msgs
+[2.399s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/ament_index/resource_index/parent_prefix_path/wpa_cli_msgs
+[2.399s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/ament_prefix_path.sh
+[2.400s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/ament_prefix_path.dsv
+[2.400s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/path.sh
+[2.401s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/environment/path.dsv
+[2.401s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/local_setup.bash
+[2.401s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/local_setup.sh
+[2.401s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/local_setup.zsh
+[2.402s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/local_setup.dsv
+[2.402s] -- Installing: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/package.dsv
+[2.406s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/ament_index/resource_index/packages/wpa_cli_msgs
+[2.407s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_generator_cExport.cmake
+[2.407s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.409s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.410s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.412s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_generator_cppExport.cmake
+[2.413s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.413s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.416s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.416s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.418s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_cExport.cmake
+[2.418s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.419s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.419s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.421s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_cppExport.cmake
+[2.421s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.423s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_generator_pyExport.cmake
+[2.423s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/export_wpa_cli_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.423s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/rosidl_cmake-extras.cmake
+[2.423s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.424s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.424s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.424s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.424s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.425s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.425s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgsConfig.cmake
+[2.425s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/cmake/wpa_cli_msgsConfig-version.cmake
+[2.426s] -- Up-to-date: /home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli_msgs/share/wpa_cli_msgs/package.xml
+[2.655s] Invoked command in '/home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/GTL/mgaddam/CS7630/ros2_ws/install/wpa_cli:/home/GTL/mgaddam/CS7630/ros2_ws/install/vrep_ros_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/task_manager_client_py:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_slam_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_loc_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/rover_driver_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/keyboard_teleop:/home/GTL/mgaddam/CS7630/ros2_ws/install/face_detect_base:/home/GTL/mgaddam/CS7630/ros2_ws/install/button_server:/home/GTL/mgaddam/CS7630/ros2_ws/install/ar_mapping_base:/opt/ros/humble /usr/bin/cmake --install /home/GTL/mgaddam/CS7630/ros2_ws/build/wpa_cli_msgs
