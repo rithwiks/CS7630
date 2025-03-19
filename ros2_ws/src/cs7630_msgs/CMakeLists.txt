@@ -15,6 +15,8 @@ find_package(sensor_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RegionOfInterestArray.msg"
+  "msg/Trajectory.msg"
+  "msg/TrajectoryElement.msg"
   DEPENDENCIES sensor_msgs
  )
 
