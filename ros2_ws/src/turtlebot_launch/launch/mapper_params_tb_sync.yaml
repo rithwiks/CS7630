@@ -9,13 +9,21 @@ slam_toolbox:
     ceres_dogleg_type: TRADITIONAL_DOGLEG
     ceres_loss_function: None
 
-    # ROS Parameters
-    odom_frame: odom
+    # ROS Parameters - coppeliaSim
+    odom_frame: world
     map_frame: map
-    base_frame: base_footprint
-    scan_topic: /scan
+    base_frame: bubbleRob
+    scan_topic: /vrep/hokuyo
     use_map_saver: true
     mode: mapping #localization
+
+    # ROS Parameters - prerecorded bags
+    # odom_frame: odom
+    # map_frame: map
+    # base_frame: base_footprint
+    # scan_topic: /scan
+    # use_map_saver: true
+    # mode: mapping #localization
 
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
