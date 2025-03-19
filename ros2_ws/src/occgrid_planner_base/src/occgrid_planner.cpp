@@ -94,7 +94,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
             }
             // TODO: Implement obstacle expansion here
             // -----------------------
-            erosion_size = robot_radius_ / info_.resolution;
+            double erosion_size = robot_radius_ / info_.resolution;
             cv::Mat element = getStructuringElement(cv::MORPH_RECT, cv::Size(2*erosion_size+1, 2*erosion_size+1), cv::Point(erosion_size, erosion_size));
             cv::erode(og_, og_, element);
             if (!ready_) {
@@ -301,7 +301,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
                         predecessor.at<cv::Vec2s>(dest.x,dest.y) = cv::Vec2s(this_cell.x,this_cell.y);
                         cell_value(dest.x,dest.y) = new_cost;
                         // And insert the selected cells in the map.
-                        heur = sqrt((target.x - dest.x) * (target.x - dest.x) + (target.y - dest.y) * (target.y - dest.y));
+                        double heur = sqrt((target.x - dest.x) * (target.x - dest.x) + (target.y - dest.y) * (target.y - dest.y));
                         heap.insert(Heap::value_type(new_cost + heur, dest));
                     }
                 }
