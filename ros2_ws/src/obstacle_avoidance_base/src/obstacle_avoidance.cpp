@@ -205,10 +205,22 @@ class ObstacleAvoidance : public rclcpp::Node {
             double min_w = -max_angular_velocity_;
             double max_w = max_angular_velocity_;
             // TODO: First update min_v/max_v and min_w/max_w to compute the intersection of Vs and Vd.
-            min_v = std::max(min_v,min_v);
-            max_v = std::min(max_v,max_v);
-            min_w = std::max(min_w,min_w);
-            max_w = std::min(max_w,max_w);
+            // acceleration contstraints
+            double v_current = current_velocity_.linear.x;
+            double w_current = current_velocity_.angular.z;
+
+            double dt = 0.1;
+
+            double min_v_dyn = v_current - max_linear_accel_ * dt;
+            double max_v_dyn = v_current + max_linear_accel_ * dt;
+            double min_w_dyn = w_current - max_angular_accel_ * dt;
+            double max_w_dyn = w_current + max_angular_accel_ * dt;
+
+            // Compute intersection of static and dynamic constraints
+            min_v = std::max(min_v, min_v_dyn);
+            max_v = std::min(max_v, max_v_dyn);
+            min_w = std::max(min_w, min_w_dyn);
+            max_w = std::min(max_w, max_w_dyn);
 
             // From that, we know which velocities we need to consider and we
             // creat a small matrix to help visualising Va (Vr)
@@ -221,14 +233,47 @@ class ObstacleAvoidance : public rclcpp::Node {
             // map, and find the most appropriate speed
             // TODO: Fill Vas with the acceptable velocities (given the time
             // horizon)
-            double best_score = 0;
+            double best_score = -INFINITY;
             double best_v = 0, best_w = 0;
             for (unsigned int j=0;j<n_v;j++) {
                 double v = min_v + j*linear_velocity_resolution_;
                 for (unsigned int i=0;i<n_w;i++) {
                     double w = min_w + i*angular_velocity_resolution_;
-                    Va(j,i) = UNKNOWN;
-                    scores(j,i) = v+w;// Stupid value to avoid the "unused variable" warning
+                    bool is_safe = true;
+                    
+                    if (std::abs(w) < 0.001) {
+                        double distance = v * time_horizon_;
+                        if (v != 0 && occupancy_dalpha(distance, 0) == OCCUPIED) {
+                            is_safe = false;
+                        }
+                    } else {
+                        double radius = v / w;
+                        double arc_length = std::abs(w * time_horizon_);
+                        double distance = std::abs(radius) * arc_length;
+                        if (occupancy_dalpha(distance, std::atan2(1.0, radius)) == OCCUPIED) {
+                            is_safe = false;
+                        }
+                    }
+                    
+                    Va(j, i) = is_safe ? FREE : OCCUPIED;
+                    
+                    if (is_safe) {
+                        double v_diff = std::abs(v - desired.linear.x);
+                        double w_diff = std::abs(w - desired.angular.z);
+                        double score = k_v_ * (max_linear_velocity_ - v_diff) + k_w_ * (max_angular_velocity_ - w_diff);
+                        
+                        scores(j, i) = score;
+                        
+                        if (score > best_score) {
+                            best_score = score;
+                            best_v = v;
+                            best_w = w;
+                        }
+                    } else {
+                        scores(j, i) = -INFINITY;
+                    }
+                    // Va(j,i) = UNKNOWN;
+                    // scores(j,i) = v+w;// Stupid value to avoid the "unused variable" warning
                 }
             }
             RCLCPP_INFO(this->get_logger(),"Best score %f for (%f,%f)",
