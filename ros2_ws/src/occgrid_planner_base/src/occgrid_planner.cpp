@@ -279,19 +279,19 @@ class OccupancyGridPlanner : public rclcpp::Node {
             // first 4 values of the array. If we use 8-connexity we use the
             // full array.
             cv::Point3i neighbours[8][7] = {{cv::Point3i(1,0,0),cv::Point3i(1,1,2),cv::Point3i(1,-1,-2),cv::Point3i(2,1,1),cv::Point3i(2,-1,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
-                            {cv::Point3i(1,1,0),cv::Point3i(0,2,2),cv::Point3i(2,0,-2),cv::Point3i(1,2,1),cv::Point3i(2,1,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
+                            {cv::Point3i(1,1,0),cv::Point3i(0,1,2),cv::Point3i(1,0,-2),cv::Point3i(1,2,1),cv::Point3i(2,1,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
                             {cv::Point3i(0,1,0),cv::Point3i(-1,1,2),cv::Point3i(1,1,-2),cv::Point3i(-1,2,1),cv::Point3i(1,2,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
-                            {cv::Point3i(-1,1,0),cv::Point3i(-2,0,2),cv::Point3i(0,2,-2),cv::Point3i(-2,1,1),cv::Point3i(-1,2,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
+                            {cv::Point3i(-1,1,0),cv::Point3i(-1,0,2),cv::Point3i(0,1,-2),cv::Point3i(-2,1,1),cv::Point3i(-1,2,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
                             {cv::Point3i(-1,0,0),cv::Point3i(-1,-1,2),cv::Point3i(-1,1,-2),cv::Point3i(-2,-1,1),cv::Point3i(-2,1,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
-                            {cv::Point3i(-1,-1,0),cv::Point3i(0,-2,2),cv::Point3i(-2,0,-2),cv::Point3i(-1,-2,1),cv::Point3i(-2,-1,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
+                            {cv::Point3i(-1,-1,0),cv::Point3i(0,-1,2),cv::Point3i(-1,0,-2),cv::Point3i(-1,-2,1),cv::Point3i(-2,-1,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
                             {cv::Point3i(0,-1,0),cv::Point3i(1,-1,2),cv::Point3i(-1,-1,-2),cv::Point3i(1,-2,1),cv::Point3i(-1,-2,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)},
-                            {cv::Point3i(1,-1,0),cv::Point3i(2,0,2),cv::Point3i(0,-2,-2),cv::Point3i(2,-1,1),cv::Point3i(1,-2,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)}
+                            {cv::Point3i(1,-1,0),cv::Point3i(1,0,2),cv::Point3i(0,-1,-2),cv::Point3i(2,-1,1),cv::Point3i(1,-2,-1),cv::Point3i(0,0,1), cv::Point3i(0,0,-1)}
                                     };
             // TODO: Create a new set of neighbours in 3D
             // std::array<cv::Point3i,1> neighbours = {cv::Point3i(0,0,0)}; 
             // Cost of displacement corresponding the neighbours. Diagonal
             // moves are 44% longer.
-            float cost[2][7] = {{1, sqrt(2), sqrt(2), sqrt(2), sqrt(2), 2.0, 2.0}, {sqrt(2), sqrt(2), sqrt(2), sqrt(3), sqrt(3), 2.0, 2.0}};
+            float cost[2][7] = {{1, sqrt(2), sqrt(2), sqrt(2), sqrt(2), .5, .5}, {sqrt(2), 1, 1, sqrt(3), sqrt(3), .5, .5}};
             
             // The core of Dijkstra's Algorithm, a sorted heap, where the first
             // element is always the closer to the start.
@@ -326,7 +326,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
                         // occupied or unknown
                         continue;
                     }
-                    RCLCPP_INFO(this->get_logger(),"%d, %d,%d",dest.x,dest.y, dest.z);
+                    RCLCPP_INFO(this->get_logger(),"%d, %d,%d from %d, %d,%d",dest.x,dest.y, dest.z, this_cell.x, this_cell.y, this_cell.z);
                     float cv = cell_value(dest.x,dest.y, dest.z);
                     float new_cost = this_cost + cost[this_cell.z%2][i];
                     if (std::isnan(cv) || (new_cost < cv)) {
@@ -335,7 +335,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
                         predecessor.at<cv::Vec3s>(dest.x,dest.y,dest.z) = cv::Vec3s(this_cell.x,this_cell.y,this_cell.z);
                         cell_value(dest.x,dest.y,dest.z) = new_cost;
                         // And insert the selected cells in the map.
-                        double ang_cost = std::min(fabs(target.z - dest.z), 8 - fabs(target.z - dest.z));
+                        double ang_cost = (std::min(fabs(target.z - dest.z), 8 - fabs(target.z - dest.z))) / 4.0;
                         double heur = sqrt((target.x - dest.x) * (target.x - dest.x) + (target.y - dest.y) * (target.y - dest.y)) +  ang_cost;
                         heap.insert(Heap::value_type(new_cost + heur, dest));
                     }
