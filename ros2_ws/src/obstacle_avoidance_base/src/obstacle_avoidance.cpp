@@ -209,7 +209,7 @@ class ObstacleAvoidance : public rclcpp::Node {
             double v_current = current_velocity_.linear.x;
             double w_current = current_velocity_.angular.z;
 
-            double dt = 0.1;
+            double dt = time_horizon_;
 
             double min_v_dyn = v_current - max_linear_accel_ * dt;
             double max_v_dyn = v_current + max_linear_accel_ * dt;
@@ -239,38 +239,23 @@ class ObstacleAvoidance : public rclcpp::Node {
                 double v = min_v + j*linear_velocity_resolution_;
                 for (unsigned int i=0;i<n_w;i++) {
                     double w = min_w + i*angular_velocity_resolution_;
-                    bool is_safe = true;
                     
-                    if (std::abs(w) < 0.001) {
-                        double distance = v * time_horizon_;
-                        if (v != 0 && occupancy_dalpha(distance, 0) == OCCUPIED) {
-                            is_safe = false;
-                        }
-                    } else {
-                        double radius = v / w;
-                        double arc_length = std::abs(w * time_horizon_);
-                        double distance = std::abs(radius) * arc_length;
-                        if (occupancy_dalpha(distance, std::atan2(1.0, radius)) == OCCUPIED) {
-                            is_safe = false;
-                        }
-                    }
+                    double d = (v * time_horizon_);
+                    double alpha = atan2(v, w);
+
                     
-                    Va(j, i) = is_safe ? FREE : OCCUPIED;
-                    
-                    if (is_safe) {
-                        double v_diff = std::abs(v - desired.linear.x);
-                        double w_diff = std::abs(w - desired.angular.z);
-                        double score = k_v_ * (max_linear_velocity_ - v_diff) + k_w_ * (max_angular_velocity_ - w_diff);
-                        
-                        scores(j, i) = score;
-                        
+                    if (occupancy_dalpha(d, alpha) == FREE) {
+                        Va(j,i) = FREE;
+                        double score = k_v_ * v - k_w_ * fabs(w);
+                        scores(j,i) = score;
                         if (score > best_score) {
                             best_score = score;
                             best_v = v;
                             best_w = w;
                         }
+
                     } else {
-                        scores(j, i) = -INFINITY;
+                        Va(j,i) = OCCUPIED;
                     }
                     // Va(j,i) = UNKNOWN;
                     // scores(j,i) = v+w;// Stupid value to avoid the "unused variable" warning
