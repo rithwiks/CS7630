@@ -179,28 +179,23 @@ class PathFollower : public rclcpp::Node {
                 geometry_msgs::msg::Pose2D error = computeError(now,it->second);
                 pose2d_pub_->publish(error);
                 if (hypot(error.x,error.y)>max_error_) {
-                    // add the time of while to the delay
                     delay_ += period_;
-                    // there is a little bug, then the robot is blocked
-                    // the target continue to go forward, but very slowly
-                    // We didn't take into account the execution time
-                    // of one iteration of a loop
                     RCLCPP_INFO(this->get_logger(),"New delay: %.2f", delay_);
 
-#if 0
-                    // STEP3
-                    // We are stuck for too long time
                     if(delay_ > 5) {
-                        target_pub_->publish(goal_); // Then remake atrajectory
+                        RCLCPP_INFO(this->get_logger(),"Publishing", delay_);
+                        goal_.header.stamp = this->get_clock()->now();
+                        target_pub_->publish(goal_);
                     }
-#endif
+
                 }
 
                 geometry_msgs::msg::Twist twist;
-                if (final && (error.x < 0.1)) {
+                if (final && (abs(error.x) < 0.1)) {
                     // Finished
                     twist.linear.x = 0.0;
                     twist.angular.z = 0.0;
+                    RCLCPP_INFO(this->get_logger(),"Finished with errors: : %.2f %.2f %.2f", error.x, error.y, error.theta);
                 } else {
                     twist.linear.x = it->second.twist.linear.x + Kx_ * error.x;
                     twist.linear.x = std::min(twist.linear.x,max_velocity_);

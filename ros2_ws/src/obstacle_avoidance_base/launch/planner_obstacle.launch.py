@@ -52,7 +52,7 @@ def generate_launch_description():
             output='screen'),
 
         launch_ros.actions.Node(
-            package='occgrid_planner_base', executable='occgrid_planner_base', name='occgrid_planner',
+            package='occgrid_planner', executable='occgrid_planner', name='occgrid_planner',
             parameters=[
                 {'~/neighbourhood': 8},
                 {'~/base_frame': 'bubbleRob'},
@@ -66,7 +66,7 @@ def generate_launch_description():
             output='screen'),
 
         launch_ros.actions.Node(
-            package='occgrid_planner_base', executable='path_optimizer_base', name='path_optimizer',
+            package='occgrid_planner', executable='path_optimizer', name='path_optimizer',
             parameters=[
                 {'~/max_acceleration': 0.3},
                 {'~/max_braking': 0.1},
@@ -98,12 +98,14 @@ def generate_launch_description():
             remappings=[
                 ('~/scans', '/vrep/hokuyo'),
                 ('~/current_velocity', '/vrep/twistStatus'),
-                ('~/output_velocity', '/obstacle_avoidance/command_velocity'),
+                ('~/command_velocity', '/obstacle_avoidance/command_velocity'),
+                ('~/odom', '/odom'),
+                ('~/output_velocity', '/mux/autoCommand'),
             ],
             output='screen'),
 
         launch_ros.actions.Node(
-            package='occgrid_planner_base', executable='path_follower_base', name='path_follower',
+            package='occgrid_planner', executable='path_follower', name='path_follower',
             parameters=[
                 {'~/Kx': 1.0},
                 {'~/Ky': 0.0},
@@ -117,7 +119,7 @@ def generate_launch_description():
             ],
             remappings=[
                 ('~/traj', '/path_optimizer/trajectory'),
-                ('~/twistCommand', '/mux/autoCommand'),
+                ('~/twistCommand', '/obstacle_avoidance/command_velocity'),
                 ('~/goal', '/goal_pose'),
                 ('~/obstacle_avoidance', '/obstacle_avoidance/command_velocity'),
             ],
