@@ -247,7 +247,7 @@ class ObstacleAvoidance : public rclcpp::Node {
                     if (occupancy_dalpha(d, alpha) == FREE) {
                         Va(j,i) = FREE;
                         double heading = 1 - abs(v - res.linear.x) / max_v - abs(w - res.angular.z) / max_w;
-                        double vel = v / max_v;
+                        double vel = v / max_linear_velocity_;
                         double max_dist = w != 0 ? M_PI * v/w : M_PI;
                         double temp_d = d;
                         double dist = abs(max_dist);
