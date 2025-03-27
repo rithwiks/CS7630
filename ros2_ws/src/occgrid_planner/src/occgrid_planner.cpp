@@ -79,7 +79,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
                             break;
                         case -1: 
                         default:
-                            og_(j,i) = FREE; 
+                            og_(j,i) = UNKNOWN; 
                             break;
                     }
                     // Update the bounding box of free or occupied cells.
@@ -311,7 +311,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
                         continue;
                     }
                     uint8_t og = og_(P2(dest));
-                    if (og != FREE) {
+                    if (og == OCCUPIED) {
                         // occupied or unknown
                         continue;
                     }
