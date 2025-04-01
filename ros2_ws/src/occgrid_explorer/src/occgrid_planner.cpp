@@ -264,7 +264,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
                     if (og_(j, i) == FREE && (og_(j+1, i) == UNKNOWN || og_(j-1, i) == UNKNOWN || og_(j, i+1) == UNKNOWN || og_(j, i-1) == UNKNOWN)) {
                         
                         RCLCPP_ERROR(this->get_logger(),"%d, %d is a frontier and is %d. Its neighbors are %d, %d, %d, %d", j, i, og_(j, i), og_(j+1,i), og_(j-1,i), og_(j,i+1), og_(j,i-1));
-                        double dist = sqrt((j - start.x) * (j - start.x) + (i - start.y) * (i-start.y));
+                        double dist = sqrt((j - start.y) * (j - start.y) + (i - start.x) * (i-start.x));
                         // int neighbors = (og_(j+1, i) == UNKNOWN ? 1 : 0) +
                         //                 (og_(j-1, i) == UNKNOWN ? 1 : 0) +
                         //                 (og_(j, i+1) == UNKNOWN ? 1 : 0) +
@@ -282,8 +282,8 @@ class OccupancyGridPlanner : public rclcpp::Node {
                         //     frontiers.push_back(std::make_pair(j,i));
                         // }
                         if (dist < minDist) {
-                            target.x = j;
-                            target.y = i;
+                            target.x = i;
+                            target.y = j;
                             target.z = 0;
                             minDist = dist;
                         }
@@ -302,12 +302,12 @@ class OccupancyGridPlanner : public rclcpp::Node {
             std::uniform_real_distribution<> probDist(0.0, 1.0);
             double rand_1 = probDist(rand_);
             RCLCPP_INFO(this->get_logger(),"Got random val %f", rand_1);
-            if (rand_1 <= .5) {
+            if (rand_1 <= .2) {
                 int rand_ind = indexDist(rand_);
                 std::pair<int, int> rand_pair = frontiers[rand_ind];
                 RCLCPP_INFO(this->get_logger(),"Random frontier chosen (index %d), %d, %d", rand_ind, rand_pair.first, rand_pair.second);
-                target.x = rand_pair.first;
-                target.y = rand_pair.second;
+                target.x = rand_pair.second;
+                target.y = rand_pair.first;
                 target.z = 0;
             }
             
@@ -496,6 +496,8 @@ class OccupancyGridPlanner : public rclcpp::Node {
             else {
                 target_timer_->cancel();
                 target_timer_.reset();
+                timer_.cancel();
+                timer_.reset();
             }
         }
 };
