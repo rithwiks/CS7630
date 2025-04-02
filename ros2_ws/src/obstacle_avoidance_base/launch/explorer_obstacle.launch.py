@@ -83,7 +83,7 @@ def generate_launch_description():
                 {'~/base_frame': 'bubbleRob'},
                 {'~/display': False},
                 {"~/max_range": 5.0},
-                {"~/max_linear_velocity": 1.0},
+                {"~/max_linear_velocity": .5},
                 {"~/max_angular_velocity": 1.0},
                 {"~/max_linear_accel": 5.0},
                 {"~/max_angular_accel": 5.0},

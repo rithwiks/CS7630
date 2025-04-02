@@ -257,37 +257,42 @@ class OccupancyGridPlanner : public rclcpp::Node {
             }
             cv::Point3i target = cv::Point3i(0, 0, 0);
             double minDist = info_.height * info_.width;
+            double minAng = 2*M_PI;
             int maxNeighbors = 0;
             std::vector<std::pair<int,int>> frontiers;
+            std::vector<std::pair<int,int>> all_frontiers;
             for (unsigned int j=1;j<info_.height-1;j++) {
                 for (unsigned int i=1;i<info_.width-1;i++) {
                     if (og_(j, i) == FREE && (og_(j+1, i) == UNKNOWN || og_(j-1, i) == UNKNOWN || og_(j, i+1) == UNKNOWN || og_(j, i-1) == UNKNOWN)) {
                         
                         RCLCPP_ERROR(this->get_logger(),"%d, %d is a frontier and is %d. Its neighbors are %d, %d, %d, %d", j, i, og_(j, i), og_(j+1,i), og_(j-1,i), og_(j,i+1), og_(j,i-1));
                         double dist = sqrt((j - start.y) * (j - start.y) + (i - start.x) * (i-start.x));
-                        // int neighbors = (og_(j+1, i) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j-1, i) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j, i+1) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j, i-1) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j+1, i+1) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j-1, i-1) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j-1, i+1) == UNKNOWN ? 1 : 0) +
-                        //                 (og_(j+1, i-1) == UNKNOWN ? 1 : 0);
-                        // if (neighbors > maxNeighbors) {
-                        //     target.x = j;
-                        //     target.y = i;
-                        //     target.z = 0;
-                        //     maxNeighbors = neighbors;
-                        //     frontiers.clear();
-                        //     frontiers.push_back(std::make_pair(j,i));
-                        // }
-                        if (dist < minDist) {
+                        int neighbors = (og_(j+1, i) == UNKNOWN ? 1 : 0) +
+                                        (og_(j-1, i) == UNKNOWN ? 1 : 0) +
+                                        (og_(j, i+1) == UNKNOWN ? 1 : 0) +
+                                        (og_(j, i-1) == UNKNOWN ? 1 : 0) +
+                                        (og_(j+1, i+1) == UNKNOWN ? 1 : 0) +
+                                        (og_(j-1, i-1) == UNKNOWN ? 1 : 0) +
+                                        (og_(j-1, i+1) == UNKNOWN ? 1 : 0) +
+                                        (og_(j+1, i-1) == UNKNOWN ? 1 : 0);
+                        double t_yaw = atan2(target.y-start.y, target.x-start.x);
+                        double ang_diff = abs(t_yaw - s_yaw);
+                        if (neighbors > maxNeighbors) {
                             target.x = i;
                             target.y = j;
-                            target.z = 0;
-                            minDist = dist;
+                            target.z = (unsigned int)(round(t_yaw / (M_PI/4))) % 8;
+                            maxNeighbors = neighbors;
+                            minAng = ang_diff;
+                            frontiers.clear();
+                            frontiers.push_back(std::make_pair(j,i));
+                        } else if (neighbors == maxNeighbors && ang_diff < minAng) {
+                                target.x = i;
+                                target.y = j;
+                                target.z = (unsigned int)(round(t_yaw / (M_PI/4))) % 8;
+                                minAng = ang_diff;
                         }
-                        frontiers.push_back(std::make_pair(j,i));
+                        all_frontiers.push_back(std::make_pair(j,i));
+                        
                     }
                 }
             }
@@ -299,22 +304,25 @@ class OccupancyGridPlanner : public rclcpp::Node {
             }
 
             std::uniform_int_distribution<> indexDist(0, frontiers.size() - 1);
+            std::uniform_int_distribution<> allIndexDist(0, all_frontiers.size() - 1);
             std::uniform_real_distribution<> probDist(0.0, 1.0);
             double rand_1 = probDist(rand_);
             RCLCPP_INFO(this->get_logger(),"Got random val %f", rand_1);
-            if (rand_1 <= .2) {
-                int rand_ind = indexDist(rand_);
-                std::pair<int, int> rand_pair = frontiers[rand_ind];
+            if (rand_1 <= .25) {
+                int rand_ind = allIndexDist(rand_);
+                std::pair<int, int> rand_pair = all_frontiers[rand_ind];
                 RCLCPP_INFO(this->get_logger(),"Random frontier chosen (index %d), %d, %d", rand_ind, rand_pair.first, rand_pair.second);
                 target.x = rand_pair.second;
                 target.y = rand_pair.first;
                 target.z = 0;
-            }
-            
+                double t_yaw = atan2(target.y-start.y, target.x-start.x);
+                target.z = (unsigned int)(round(t_yaw / (M_PI/4))) % 8;
 
+            }
+            double t_yaw = atan2(target.y-start.y, target.x-start.x);
 
             RCLCPP_INFO(this->get_logger(),"Planning target: %.2f %.2f %.2f-> %d %d %d",
-                    pose.pose.position.x, pose.pose.position.y, 0, target.x, target.y, target.z);
+                    pose.pose.position.x, pose.pose.position.y, t_yaw, target.x, target.y, target.z);
             cv::circle(og_rgb_marked_,P2(target), 10, cv::Scalar(0,0,255));
             if (!headless_) {
                 cv::imshow( "OccGrid", og_rgb_marked_ );
@@ -496,7 +504,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
             else {
                 target_timer_->cancel();
                 target_timer_.reset();
-                timer_.cancel();
+                timer_->cancel();
                 timer_.reset();
             }
         }

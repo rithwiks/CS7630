@@ -247,18 +247,20 @@ class ObstacleAvoidance : public rclcpp::Node {
                     if (occupancy_dalpha(d, alpha) == FREE) {
                         Va(j,i) = FREE;
                         // double heading = 1 - abs(v - res.linear.x) / max_v - abs(w - res.angular.z) / max_w;
-                        // double vel = v / max_linear_velocity_;
-                        // double max_dist = w != 0 ? M_PI * v/w : M_PI;
-                        // double temp_d = d;
-                        // double dist = abs(max_dist);
-                        // while(temp_d < abs(max_dist)) {
-                        //     if (occupancy_dalpha(temp_d, alpha) != FREE) {
-                        //         dist = temp_d;
-                        //         break;
-                        //     }
-                        //     temp_d += .1;
-                        // }
-                        double score = exp(-(k_v_ * SQR(v - res.linear.x) + k_w_ * SQR(w - res.angular.z))); // heading + vel + dist / abs(max_dist); //exp(-(k_v_ * SQR(v - res.linear.x) + k_w_ * SQR(w - res.angular.z)));
+                        double heading = exp(-(k_v_ * SQR(v - res.linear.x) + k_w_ * SQR(w - res.angular.z)));
+                        double vel = 0 * abs(v) / (max_linear_velocity_);
+                        double max_dist = w != 0 ? M_PI * v/w : M_PI;
+                        double temp_d = d;
+                        double dist = abs(max_dist);
+                        while(temp_d < abs(max_dist)) {
+                            if (occupancy_dalpha(temp_d, alpha) != FREE) {
+                                dist = temp_d;
+                                break;
+                            }
+                            temp_d += .1;
+                        }
+                        double dist_score = 1 - exp(-(dist - 2*robot_radius_));
+                        double score = heading + vel + dist_score;  // 
                         scores(j,i) = score;
                         if (score > best_score) {
                             best_score = score;
@@ -273,8 +275,8 @@ class ObstacleAvoidance : public rclcpp::Node {
                     // scores(j,i) = v+w;// Stupid value to avoid the "unused variable" warning
                 }
             }
-            // RCLCPP_INFO(this->get_logger(),"Best score %f for (%f,%f)",
-            //         best_score,best_v,best_w);
+            RCLCPP_INFO(this->get_logger(),"Best score %f for (%f,%f)",
+                    best_score,best_v,best_w);
             if (display_) {
                 cv::resize(scores,scores,cv::Size(200,200));
                 cv::imshow("Va",Va);
