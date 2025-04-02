@@ -112,7 +112,10 @@ class WifiMapNode : public rclcpp::Node {
                         float x = j - winsize/2;
 
                         // TODO 1: Affect a weight to i,j as a function of x,y. Weights should be in [0,1]
-                        weights_(i,j) = exp((x*x + y*y) / (winsize / 2)*(winsize/2));
+                        weights_(i,j) = hypot(x,y) / hypot(winsize / 2, winsize / 2);
+                        float sigma = 0.3;
+                        weights_(i,j) = exp((-1 * weights_(i,j) * weights_(i,j)) / (sigma * sigma));
+
                     }
                 }
                 cv::imwrite("weights.png",weights_*255);
@@ -158,15 +161,19 @@ class WifiMapNode : public rclcpp::Node {
                     // og_(j,i) can be OCCUPIED, FREE, UNKNOWN
 
                     // Example affectation for an unknown value
+
+                    if (denominator(j,i) < 0.01) {
+                        og_mat(j,i) = UNKNOWN;
+                        continue;
+                    }
+
                     float val = numerator(j, i) / denominator(j, i);
+                    int int_val = static_cast<int>(std::round(val));
+                    
                     if (og_(j, i) == OCCUPIED) {
                         og_mat(j, i) = OCCUPIED;
-                    } else if (val < .005 || denominator(j, i) == 0) {
-                        og_mat(j, i) = UNKNOWN;
-                        og_(j, i) = UNKNOWN;
                     } else {
-                        og_mat(j, i) = static_cast<uint8_t>(std::min(100.0f, val)); 
-                        og_(j, i) = static_cast<uint8_t>(std::min(100.0f, val)); 
+                        og_mat(j, i) = int_val;
                     }
                 }
             }
