@@ -11,6 +11,7 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <tf2_ros/transform_listener.h>
 #include <tf2_ros/buffer.h>
+#include "std_msgs/msg/empty.hpp"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 #define FREE 0xFF
@@ -30,8 +31,9 @@ class ObstacleAvoidance : public rclcpp::Node {
         rclcpp::TimerBase::SharedPtr timer_;
         std::shared_ptr<tf2_ros::TransformListener> tf_listener{nullptr};
         std::unique_ptr<tf2_ros::Buffer> tf_buffer;
-
-
+        bool is_running_ = false;
+        rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr start_sub_;
+        rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr stop_sub_;
         bool display_;
         double robot_radius_;
         double time_horizon_;
@@ -126,6 +128,9 @@ class ObstacleAvoidance : public rclcpp::Node {
 
     protected: // ROS Callbacks
         void command_velocity_cb(geometry_msgs::msg::Twist::SharedPtr msg) {
+            if (!is_running_) {
+                return;
+            }
             geometry_msgs::msg::Twist filtered = findClosestAcceptableVelocity(*msg);
             // ROS_INFO("Speed limiter: desired %.2f controlled %.2f",msg->linear.x,filtered.linear.x);
             safe_vel_pub_->publish(filtered);
@@ -346,7 +351,13 @@ class ObstacleAvoidance : public rclcpp::Node {
             command_vel_sub_ = this->create_subscription<geometry_msgs::msg::Twist>("~/command_velocity",1,
                     std::bind(&ObstacleAvoidance::command_velocity_cb,this,std::placeholders::_1));
             safe_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("~/output_velocity",1);
+            start_sub_ = this->create_subscription<std_msgs::msg::Empty>(
+                    "/start_exploration", 10,
+                    std::bind(&ObstacleAvoidance::start_callback, this, std::placeholders::_1));
 
+            stop_sub_ = this->create_subscription<std_msgs::msg::Empty>(
+                    "/stop_exploration", 10,
+                    std::bind(&ObstacleAvoidance::stop_callback, this, std::placeholders::_1));
             grid_width_ = 2*max_range_ / map_resolution_ + 1;
             og_ = cv::Mat_<uint8_t>(grid_width_,grid_width_,FREE);
             n_d_ = ceil(2*max_range_/map_resolution_); 
@@ -375,6 +386,13 @@ class ObstacleAvoidance : public rclcpp::Node {
 
         void timer_cb() {
             cv::waitKey(5);
+        }
+        void start_callback(const std_msgs::msg::Empty::SharedPtr) {
+            is_running_ = true;
+        }
+
+        void stop_callback(const std_msgs::msg::Empty::SharedPtr) {
+            is_running_ = false;
         }
 };
 

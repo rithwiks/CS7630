@@ -106,7 +106,7 @@ def generate_launch_description():
                 {'~/velocity': 0.1},
                 ],
             remappings=[
-                ('~/path', '/occgrid_explorer/path'),
+                ('~/path', '/occgrid_planner/path'),
                 ],
             output='screen'),
 

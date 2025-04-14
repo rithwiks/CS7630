@@ -18,6 +18,7 @@
 
 #include <nav_msgs/msg/occupancy_grid.hpp>
 #include <nav_msgs/msg/path.hpp>
+#include "std_msgs/msg/empty.hpp"
 #include <geometry_msgs/msg/pose_stamped.hpp>
 
 #define FREE 0xFF
@@ -34,6 +35,8 @@ class OccupancyGridPlanner : public rclcpp::Node {
         rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr target_sub_;
         rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr path_pub_;
         rclcpp::TimerBase::SharedPtr timer_;
+        rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr start_sub_;
+        rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr stop_sub_;
 
 
         std::shared_ptr<tf2_ros::TransformListener> tf_listener{nullptr};
@@ -55,6 +58,7 @@ class OccupancyGridPlanner : public rclcpp::Node {
         rclcpp::TimerBase::SharedPtr target_timer_;
         bool og_exists_ = false;
         std::mt19937 rand_;
+        bool is_running_ = false;
 
         typedef std::multimap<float, cv::Point3i> Heap;
 
@@ -477,17 +481,47 @@ class OccupancyGridPlanner : public rclcpp::Node {
             // target_sub_ = this->create_subscription<geometry_msgs::msg::PoseStamped>("~/goal",1,
             //         std::bind(&OccupancyGridPlanner::target_callback,this,std::placeholders::_1));
             path_pub_ = this->create_publisher<nav_msgs::msg::Path>("~/path",1);
+            start_sub_ = this->create_subscription<std_msgs::msg::Empty>(
+                    "/start_exploration", 10,
+                    std::bind(&OccupancyGridPlanner::start_callback, this, std::placeholders::_1));
 
-            if (!headless_) {
-                cv::namedWindow( "OccGrid", cv::WINDOW_AUTOSIZE );
-                timer_ = this->create_wall_timer( 50ms,
+            stop_sub_ = this->create_subscription<std_msgs::msg::Empty>(
+                "/stop_exploration", 10,
+                std::bind(&OccupancyGridPlanner::stop_callback, this, std::placeholders::_1));
+        }
+        void start_callback(const std_msgs::msg::Empty::SharedPtr /*msg*/) {
+            if (!is_running_) {
+                RCLCPP_INFO(this->get_logger(), "Received start message.");
+                is_running_ = true;
+
+                if (!headless_) {
+                    cv::namedWindow("OccGrid", cv::WINDOW_AUTOSIZE);
+                    
+                }
+                timer_ = this->create_wall_timer(
+                        50ms,
                         std::bind(&OccupancyGridPlanner::timer_cb, this));
+            }
+        }
+        void stop_callback(const std_msgs::msg::Empty::SharedPtr /*msg*/) {
+            if (is_running_) {
+                RCLCPP_INFO(this->get_logger(), "Received stop message.");
+                is_running_ = false;
+
+                if (target_timer_) {
+                    target_timer_->cancel();
+                    target_timer_.reset();
+                }
+                if (timer_) {
+                    timer_->cancel();
+                    timer_.reset();
+                }
             }
         }
 
         void timer_cb() {
-            if (og_exists_ && !target_timer_) {
-                RCLCPP_INFO(this->get_logger(), "Starting frontier selection every 5 seconds");
+            if (og_exists_ && !target_timer_ && is_running_) {
+                RCLCPP_INFO(this->get_logger(), "Starting frontier selection every 10 seconds");
                 target_timer_ = this->create_wall_timer(10000ms, std::bind(&OccupancyGridPlanner::run_target_callback, this));
             }
 
